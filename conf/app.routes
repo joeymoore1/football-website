@@ -1,4 +1,3 @@
-
 GET     /                           controllers.HomeController.index()
 
 GET     /team                       controllers.TeamController.team()
