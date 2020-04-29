@@ -1,3 +1,3 @@
 package Models
 
-case class Team(team: List[Player])
+case class Team(players: Seq[Player])
