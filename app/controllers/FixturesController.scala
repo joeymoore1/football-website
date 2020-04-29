@@ -1,6 +1,6 @@
 package controllers
 
-import Models.Fixture
+import models.Fixture
 import javax.inject._
 import play.api.mvc._
 

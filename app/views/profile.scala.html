@@ -1,0 +1,18 @@
+@import models.Player
+@(player: Player)
+
+@main("Player Profile") {
+  <h1>@{player.name}'s Profile</h1>
+
+  <a href="@routes.TeamController.team()">Back to the team</a>
+  </br>
+  </br>
+
+  <a>@{player.name} is a @{player.position}</a>
+  </br>
+  <a>Appearances: 0</a>
+  </br>
+  <a>Goals: 0</a>
+  </br>
+  <img src="@routes.Assets.versioned("images/joey.jpg")" style="width:400px;height:400px;">
+}
