@@ -18,4 +18,8 @@ class TeamController @Inject()(val controllerComponents: ControllerComponents) e
 
   val newTeam: Team = Team(Seq(joey, matt, chad, rhys))
 
+  def playersByPositions(team: Team, position: String): Team = {
+    Team(team.players.filter(_.position.equals(position)))
+  }
 }
+  
