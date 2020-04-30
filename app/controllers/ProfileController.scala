@@ -1,16 +1,18 @@
 package controllers
 
-import models.Player
 import javax.inject._
 import play.api.mvc._
+import service.ProfileService
 
 @Singleton
-class ProfileController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
+class ProfileController @Inject()(val controllerComponents: ControllerComponents, profileService: ProfileService) extends BaseController {
 
-  def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.profile(joey))
+  def index(playerIndex: Int): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+
+    val player = profileService.getPlayerById(playerIndex)
+
+    Ok(views.html.profile(player))
   }
 
-  val joey: Player = Player(1, "Joey Moore", "Striker")
 }
   

@@ -1,6 +1,9 @@
 @import models.Player
 @(player: Player)
 
+@playerName = @{player.name}
+@imageLocation = @{s"images/$playerName.jpg"}
+
 @main("Player Profile") {
   <h1>@{player.name}'s Profile</h1>
 
@@ -14,5 +17,5 @@
   </br>
   <a>Goals: 0</a>
   </br>
-  <img src="@routes.Assets.versioned("images/joey.jpg")" style="width:400px;height:400px;">
+  <img src="@routes.Assets.versioned(imageLocation)" style="width:400px;height:400px;">
 }

@@ -37,5 +37,4 @@ class ProfileService @Inject()() {
     else if (filteredMidfielders.nonEmpty) filteredMidfielders.head
     else filteredStrikers.head
   }
-
 }

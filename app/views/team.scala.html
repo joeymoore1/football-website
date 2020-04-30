@@ -10,7 +10,7 @@
 
   <a>Keeper</a></br>
   @for(player <- team.keepers) {
-  <a>Name: </a><a>@player.name</a>
+  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
   </br>
   }
 
@@ -18,7 +18,7 @@
 
   <a>Defenders</a></br>
   @for(player <- team.defenders) {
-  <a>Name: </a><a>@player.name</a>
+  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
   </br>
   }
 
@@ -26,7 +26,7 @@
 
   <a>Midfielders</a></br>
   @for(player <- team.midfielders) {
-  <a>Name: </a><a>@player.name</a>
+  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
   </br>
   }
 
@@ -34,7 +34,7 @@
 
   <a>Strikers</a></br>
   @for(player <- team.strikers) {
-  <a>Name: </a><a href="@routes.ProfileController.index()">@player.name</a>
+  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
   </br>
 }
 }
