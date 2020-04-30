@@ -1,3 +1,3 @@
 package models
 
-case class Player(name: String, position: String)
+case class Player(index: Int, name: String, position: String)

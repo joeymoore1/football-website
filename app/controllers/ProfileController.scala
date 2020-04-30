@@ -11,6 +11,6 @@ class ProfileController @Inject()(val controllerComponents: ControllerComponents
     Ok(views.html.profile(joey))
   }
 
-  val joey: Player = Player("Joey Moore", "Striker")
+  val joey: Player = Player(1, "Joey Moore", "Striker")
 }
   
