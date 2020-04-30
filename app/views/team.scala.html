@@ -8,6 +8,9 @@
   <a href="@routes.HomeController.index()">Home Page</a>
   </br></br>
 
+  <img src="@routes.Assets.versioned("images/teamPhoto.jpg")" style="width:660px;height:400px;">
+  </br></br>
+
   <a>Keeper</a></br>
   @for(player <- team.keepers) {
   <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
