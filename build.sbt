@@ -1,4 +1,4 @@
-name := """football-prohject"""
+name := """football-project"""
 organization := "com.example"
 
 version := "1.0-SNAPSHOT"
@@ -7,8 +7,11 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.13.1"
 
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+libraryDependencies ++= List(
+  guice,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
+  "com.typesafe.slick" %% "slick" % "3.3.2"
+)
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"

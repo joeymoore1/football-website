@@ -2,17 +2,19 @@
 @(player: Player)
 
 @main("Player Profile") {
-  <h1>@{player.name}'s Profile</h1>
 
-  <a href="@routes.TeamController.team()">Back to the team</a>
+  <a class="navLink" href="@routes.TeamController.team()">Back to the team</a>
+  </br></br>
+
+  <h1>@player.name.firstName @player.name.lastName's Profile</h1>
   </br>
   </br>
 
-  <a>@{player.name} is a @{player.position}</a>
+  <a>@player.name.firstName @player.name.lastName is a @player.position</a>
   </br>
   <a>Appearances: 0</a>
   </br>
   <a>Goals: 0</a>
   </br>
-  <img src="@routes.Assets.versioned(s"images/${player.name}.jpg")" style="width:400px;height:400px;">
+  <img src="@routes.Assets.versioned(s"images/${player.name.firstName} ${player.name.lastName}.jpg")" style="width:400px;height:400px;">
 }

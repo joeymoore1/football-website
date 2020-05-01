@@ -3,41 +3,41 @@
 @(team: Team)
 
 @main("St Georges Team") {
+<div class="column-two-thirds">
+  <a class="navLink" href="@routes.HomeController.index()">Home Page</a>
+  </br></br>
+
   <h1>The Team</h1>
 
-  <a href="@routes.HomeController.index()">Home Page</a>
   </br></br>
 
-  <img src="@routes.Assets.versioned("images/teamPhoto.jpg")" style="width:660px;height:400px;">
-  </br></br>
+    <img src="@routes.Assets.versioned("images/teamPhoto.jpg")" style="width:660px;height:400px;">
+    </br></br>
 
-  <a>Keeper</a></br>
-  @for(player <- team.keepers) {
-  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
-  </br>
+    <a>Keepers</a></br>
+    @for(player <- team.keepers) {
+    <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
+    }
+
+    </br></br>
+
+    <a>Defenders</a></br>
+    @for(player <- team.defenders) {
+    <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
+    }
+
+    </br></br>
+
+    <a>Midfielders</a></br>
+    @for(player <- team.midfielders) {
+    <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
+    }
+
+    </br></br>
+
+    <a>Strikers</a></br>
+    @for(player <- team.strikers) {
+    <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
   }
-
-  </br></br>
-
-  <a>Defenders</a></br>
-  @for(player <- team.defenders) {
-  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
-  </br>
-  }
-
-  </br></br>
-
-  <a>Midfielders</a></br>
-  @for(player <- team.midfielders) {
-  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
-  </br>
-  }
-
-  </br></br>
-
-  <a>Strikers</a></br>
-  @for(player <- team.strikers) {
-  <a>Name: </a><a href="@routes.ProfileController.index(player.index)">@player.name</a>
-  </br>
-}
+</div>
 }

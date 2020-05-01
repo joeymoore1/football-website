@@ -1,0 +1,16 @@
+.playerName {
+  padding-right:1em;
+}
+
+h1 {
+    display: inline;
+}
+
+.navLink {
+    font-size:20px;
+    padding-right:13em;
+}
+
+.text {
+    font-size:25px;
+}

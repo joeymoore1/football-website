@@ -1,9 +1,9 @@
 package service
 
 import javax.inject.Inject
-import models.{Player, Team, Name}
+import models.{Name, Player, Result, Team}
 
-class ProfileService @Inject()() {
+class ResultsService @Inject()() {
 
   val joey: Player = Player(1, Name("Joey","Moore"), "Striker")
   val chad: Player = Player(2, Name("Chad","Bailey"), "Keeper")
@@ -26,33 +26,14 @@ class ProfileService @Inject()() {
 
   def newTeam: Team = Team(keepers, defenders, midfielders, strikers)
 
-  def getPlayerById(id: Int): Player = {
-    val filteredKeepers: Seq[Player] = newTeam.keepers.filter(_.index == id)
-    val filteredDefenders: Seq[Player] = newTeam.defenders.filter(_.index == id)
-    val filteredMidfielders: Seq[Player] = newTeam.midfielders.filter(_.index == id)
-    val filteredStrikers: Seq[Player] = newTeam.strikers.filter(_.index == id)
+  def matchAgainstJuniors: Team = Team(List(chad), List(matt, ben), List(ryan, adam, ian), List(joey, rhys))
 
-    if (filteredKeepers.nonEmpty) filteredKeepers.head
-    else if (filteredDefenders.nonEmpty) filteredDefenders.head
-    else if (filteredMidfielders.nonEmpty) filteredMidfielders.head
-    else filteredStrikers.head
+  val result1: Result = Result(1, matchAgainstJuniors, "Telford Juniors", 4, 1)
+
+  val results: List[Result] = List(result1)
+
+  def getResultById(id: Int): Result = {
+    val filteredResults = results.filter(_.index == id)
+    filteredResults.head
   }
-
-
-  import slick.jdbc.MySQLProfile.api._
-  import slick.jdbc.MySQLProfile
-  import slick.jdbc.JdbcProfile
-
-  class MySQLService(jdbcUrl: String, dbUser: String, dbPassword: String) {
-
-    // Setup our database driver, Postgres in this case
-    //  val driver: JdbcProfile = PostgresDriver
-    val driver: JdbcProfile = MySQLProfile
-
-    // Create a database connection
-    val db: Database = Database.forURL(jdbcUrl, dbUser, dbPassword)
-    db.createSession()
-  }
-
-
 }

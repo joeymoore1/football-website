@@ -1,0 +1,33 @@
+@import models.Result
+
+@(result: Result)
+
+@main("Result") {
+  <a class="navLink" href="@routes.ResultsController.index()">Results</a>
+  </br></br>
+
+  <h1>Result against @result.awayTeam</h1>
+  </br>
+
+  <h2>St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</h2>
+
+  @for(player <- result.homeTeam.keepers) {
+  <a>@player.name.firstName @player.name.lastName</a>
+  </br>
+  }
+
+  @for(player <- result.homeTeam.defenders) {
+  <a>@player.name.firstName @player.name.lastName</a>
+  </br>
+}
+
+  @for(player <- result.homeTeam.midfielders) {
+  <a>@player.name.firstName @player.name.lastName</a>
+  </br>
+  }
+
+  @for(player <- result.homeTeam.strikers) {
+  <a>@player.name.firstName @player.name.lastName</a>
+  </br>
+  }
+}

@@ -1,9 +1,17 @@
-@()
+@import models.Result
+
+@(results: List[Result])
 
 @main("St Georges Results") {
-  <h1>Results</h1>
-
-  <a href="@routes.HomeController.index()">Home Page</a>
+  <a class="navLink" href="@routes.HomeController.index()">Home Page</a>
   </br></br>
+
+  <h1>Recent results</h1>
+  </br> </br>
+
+
+  @for(result <- results) {
+  <a class="text" href="@routes.ResultController.index(result.index)">St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</a>
+  }
 
 }
