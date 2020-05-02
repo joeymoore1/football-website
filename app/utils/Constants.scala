@@ -36,8 +36,8 @@ object Constants {
   val matchAgainstJuniors: Team = Team(List(chad), List(matt, ben), List(ryan, adam, ian), List(joey, rhys))
   val matchAgainstLiverpool: Team = Team(List(chad), List(kieran, ben), List(ryan, curt, callum), List(joey, zoltan))
 
-  val result1: Result = Result(1, matchAgainstJuniors, "Telford Juniors", 4, 1)
-  val result2: Result = Result(2, matchAgainstLiverpool, "Liverpool FC", 1, 9)
+  val result1: Result = Result(1, matchAgainstJuniors, "Telford Juniors", 4, 1, List(joey, rhys, joey, curt))
+  val result2: Result = Result(2, matchAgainstLiverpool, "Liverpool FC", 1, 9, List(rhys))
 
   val fullResults: List[Result] = List(result1, result2)
 

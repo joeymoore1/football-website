@@ -30,4 +30,10 @@
   <a>@player.name.firstName @player.name.lastName</a>
   </br>
   }
+
+  </br>
+  <a>Goals were scored by: </a>
+  @for(player <- result.scorers) {
+  <a>@player.name.firstName</a>
+}
 }

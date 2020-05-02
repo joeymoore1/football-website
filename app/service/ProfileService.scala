@@ -27,12 +27,6 @@ class ProfileService @Inject()() {
     val filteredMidfielders: List[Result] = fullResults.filter(_.homeTeam.midfielders.contains(player))
     val filteredKeepers: List[Result] = fullResults.filter(_.homeTeam.keepers.contains(player))
 
-    println(player)
-    println(filteredKeepers)
-    println(filteredDefenders)
-    println(filteredMidfielders)
-    println(filteredStrikers)
-
     filteredKeepers.size + filteredDefenders.size + filteredMidfielders.size + filteredStrikers.size
   }
 
