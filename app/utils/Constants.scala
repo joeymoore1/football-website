@@ -17,19 +17,29 @@ object Constants {
   val callum: Player = Player(11, Name("Callum","Stainer"), "Midfielder")
   val kieran: Player = Player(12, Name("Kieran","Whyman"), "Defender")
   val ryan: Player = Player(13, Name("Ryan","Jones"), "Midfielder")
+  val gaz: Player = Player(14, Name("Gareth","Baker"), "Defender")
+  val mark: Player = Player(15, Name("Mark","Betteridge"), "Defender")
+  val josh: Player = Player(16, Name("Josh","Dodd"), "Midfielder")
+  val ewan: Player = Player(17, Name("Ewan","Griffiths"), "Midfielder")
+  val aaron: Player = Player(18, Name("Arran","Moore"), "Midfielder")
+  val ashley: Player = Player(19, Name("Ashley","Moore"), "Midfielder")
+  val layton: Player = Player(20, Name("Layton","Reynolds"), "Defender")
+  val dean: Player = Player(21, Name("Dean","Ridley"), "Defender")
 
   val keepers: List[Player] = List(chad).sortBy(_.name.lastName)
-  val defenders: List[Player] = List(matt, ben, dave, kieran).sortBy(_.name.lastName)
-  val midfielders: List[Player] = List(ryan, ian, adam, curt, callum).sortBy(_.name.lastName)
+  val defenders: List[Player] = List(matt, ben, dave, kieran, gaz, mark, layton, dean).sortBy(_.name.lastName)
+  val midfielders: List[Player] = List(ryan, ian, adam, curt, callum, josh, ewan, aaron, ashley).sortBy(_.name.lastName)
   val strikers: List[Player] = List(joey,rhys, zoltan).sortBy(_.name.lastName)
 
-  def fullTeam: Team = Team(keepers, defenders, midfielders, strikers)
+  val fullTeam: Team = Team(keepers, defenders, midfielders, strikers)
 
-  def matchAgainstJuniors: Team = Team(List(chad), List(matt, ben), List(ryan, adam, ian), List(joey, rhys))
+  val matchAgainstJuniors: Team = Team(List(chad), List(matt, ben), List(ryan, adam, ian), List(joey, rhys))
+  val matchAgainstLiverpool: Team = Team(List(chad), List(kieran, ben), List(ryan, curt, callum), List(joey, zoltan))
 
   val result1: Result = Result(1, matchAgainstJuniors, "Telford Juniors", 4, 1)
+  val result2: Result = Result(2, matchAgainstLiverpool, "Liverpool FC", 1, 9)
 
-  val fullResults: List[Result] = List(result1)
+  val fullResults: List[Result] = List(result1, result2)
 
   val game1:Fixture = Fixture("Manchester City", "9th February 2020", "Home")
   val game2:Fixture = Fixture("Telford Juniors", "16th February 2020", "Away")

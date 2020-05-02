@@ -11,7 +11,9 @@ class ProfileController @Inject()(val controllerComponents: ControllerComponents
 
     val player = profileService.getPlayerById(playerIndex)
 
-    Ok(views.html.profile(player))
+    val appearances = profileService.getAppearances(player)
+
+    Ok(views.html.profile(player, appearances))
   }
 
 }

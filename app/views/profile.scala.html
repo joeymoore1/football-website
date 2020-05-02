@@ -1,5 +1,5 @@
 @import models.Player
-@(player: Player)
+@(player: Player, appearances: Int)
 
 @main("Player Profile") {
 
@@ -10,9 +10,9 @@
   </br>
   </br>
 
-  <a>@player.name.firstName @player.name.lastName is a @player.position</a>
+  <a>@player.name.firstName is a @player.position</a>
   </br>
-  <a>Appearances: 0</a>
+  <a>Appearances: @appearances</a>
   </br>
   <a>Goals: 0</a>
   </br>

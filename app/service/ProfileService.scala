@@ -1,7 +1,7 @@
 package service
 
 import javax.inject.Inject
-import models.Player
+import models.{Player, Result}
 import utils.Constants._
 import slick.jdbc.MySQLProfile.api._
 import slick.jdbc.MySQLProfile
@@ -19,6 +19,21 @@ class ProfileService @Inject()() {
     else if (filteredDefenders.nonEmpty) filteredDefenders.head
     else if (filteredMidfielders.nonEmpty) filteredMidfielders.head
     else filteredStrikers.head
+  }
+
+  def getAppearances(player: Player): Int = {
+    val filteredStrikers: List[Result] = fullResults.filter(_.homeTeam.strikers.contains(player))
+    val filteredDefenders: List[Result] = fullResults.filter(_.homeTeam.defenders.contains(player))
+    val filteredMidfielders: List[Result] = fullResults.filter(_.homeTeam.midfielders.contains(player))
+    val filteredKeepers: List[Result] = fullResults.filter(_.homeTeam.keepers.contains(player))
+
+    println(player)
+    println(filteredKeepers)
+    println(filteredDefenders)
+    println(filteredMidfielders)
+    println(filteredStrikers)
+
+    filteredKeepers.size + filteredDefenders.size + filteredMidfielders.size + filteredStrikers.size
   }
 
   class MySQLService(jdbcUrl: String, dbUser: String, dbPassword: String) {
