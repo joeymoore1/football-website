@@ -1,5 +1,5 @@
 @import models.Player
-@(player: Player, appearances: Int)
+@(player: Player, appearances: Int, goals: Int)
 
 @main("Player Profile") {
 
@@ -14,7 +14,7 @@
   </br>
   <a>Appearances: @appearances</a>
   </br>
-  <a>Goals: 0</a>
+  <a>Goals: @goals</a>
   </br>
   <img src="@routes.Assets.versioned(s"images/${player.name.firstName} ${player.name.lastName}.jpg")" style="width:400px;height:400px;">
 }

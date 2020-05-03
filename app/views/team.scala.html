@@ -1,6 +1,6 @@
-@import models.Team
+@import models.Player
 
-@(team: Team)
+@(keepers: List[Player],defenders: List[Player], midfielders: List[Player], strikers: List[Player])
 
 @main("St Georges Team") {
 <div class="column-two-thirds">
@@ -15,28 +15,28 @@
     </br></br>
 
     <a>Keepers</a></br>
-    @for(player <- team.keepers) {
+    @for(player <- keepers) {
     <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
     }
 
     </br></br>
 
     <a>Defenders</a></br>
-    @for(player <- team.defenders) {
+    @for(player <- defenders) {
     <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
     }
 
     </br></br>
 
     <a>Midfielders</a></br>
-    @for(player <- team.midfielders) {
+    @for(player <- midfielders) {
     <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
     }
 
     </br></br>
 
     <a>Strikers</a></br>
-    @for(player <- team.strikers) {
+    @for(player <- strikers) {
     <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
   }
 </div>

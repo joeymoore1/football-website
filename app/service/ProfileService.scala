@@ -10,24 +10,21 @@ import slick.jdbc.JdbcProfile
 class ProfileService @Inject()() {
 
   def getPlayerById(id: Int): Player = {
-    val filteredKeepers: Seq[Player] = fullTeam.keepers.filter(_.index == id)
-    val filteredDefenders: Seq[Player] = fullTeam.defenders.filter(_.index == id)
-    val filteredMidfielders: Seq[Player] = fullTeam.midfielders.filter(_.index == id)
-    val filteredStrikers: Seq[Player] = fullTeam.strikers.filter(_.index == id)
-
-    if (filteredKeepers.nonEmpty) filteredKeepers.head
-    else if (filteredDefenders.nonEmpty) filteredDefenders.head
-    else if (filteredMidfielders.nonEmpty) filteredMidfielders.head
-    else filteredStrikers.head
+    val filterPlayersById = fullTeam.players.filter(_.index == id)
+    filterPlayersById.head
   }
 
   def getAppearances(player: Player): Int = {
-    val filteredStrikers: List[Result] = fullResults.filter(_.homeTeam.strikers.contains(player))
-    val filteredDefenders: List[Result] = fullResults.filter(_.homeTeam.defenders.contains(player))
-    val filteredMidfielders: List[Result] = fullResults.filter(_.homeTeam.midfielders.contains(player))
-    val filteredKeepers: List[Result] = fullResults.filter(_.homeTeam.keepers.contains(player))
+    val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
+    filterResultsByPlayer.size
+  }
 
-    filteredKeepers.size + filteredDefenders.size + filteredMidfielders.size + filteredStrikers.size
+  def getGoalsForPlayer(player: Player): Int = {
+    var goals = 0
+    for (result <- fullResults){
+      goals += result.scorers.count(_ == player)
+    }
+    goals
   }
 
   class MySQLService(jdbcUrl: String, dbUser: String, dbPassword: String) {

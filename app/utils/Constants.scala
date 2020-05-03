@@ -26,15 +26,16 @@ object Constants {
   val layton: Player = Player(20, Name("Layton","Reynolds"), "Defender")
   val dean: Player = Player(21, Name("Dean","Ridley"), "Defender")
 
-  val keepers: List[Player] = List(chad).sortBy(_.name.lastName)
-  val defenders: List[Player] = List(matt, ben, dave, kieran, gaz, mark, layton, dean).sortBy(_.name.lastName)
-  val midfielders: List[Player] = List(ryan, ian, adam, curt, callum, josh, ewan, aaron, ashley).sortBy(_.name.lastName)
-  val strikers: List[Player] = List(joey,rhys, zoltan).sortBy(_.name.lastName)
+  val fullTeam: Team = Team(List(chad, matt, ben, dave, kieran, gaz, mark, layton, dean, ryan, ian,
+    adam, curt, callum, josh, ewan, aaron, ashley, joey,rhys, zoltan).sortBy(_.name.lastName))
 
-  val fullTeam: Team = Team(keepers, defenders, midfielders, strikers)
+  val keepers: List[Player] = fullTeam.players.filter(_.position.equals("Keeper"))
+  val defenders: List[Player] = fullTeam.players.filter(_.position.equals("Defender"))
+  val midfielders: List[Player] = fullTeam.players.filter(_.position.equals("Midfielder"))
+  val strikers: List[Player] = fullTeam.players.filter(_.position.equals("Striker"))
 
-  val matchAgainstJuniors: Team = Team(List(chad), List(matt, ben), List(ryan, adam, ian), List(joey, rhys))
-  val matchAgainstLiverpool: Team = Team(List(chad), List(kieran, ben), List(ryan, curt, callum), List(joey, zoltan))
+  val matchAgainstJuniors: Team = Team(List(chad, matt, ben, ryan, adam, ian, joey, rhys))
+  val matchAgainstLiverpool: Team = Team(List(chad, kieran, ben, ryan, curt, callum, joey, zoltan))
 
   val result1: Result = Result(1, matchAgainstJuniors, "Telford Juniors", 4, 1, List(joey, rhys, joey, curt))
   val result2: Result = Result(2, matchAgainstLiverpool, "Liverpool FC", 1, 9, List(rhys))
@@ -46,4 +47,12 @@ object Constants {
   val game3:Fixture = Fixture("Liverpool FC", "23th February 2020", "Home")
 
   val fullFixtures: List[Fixture] = List(game1, game2, game3)
+
+  def getGoalsForPlayer(player: Player): Int = {
+    var goals = 0
+    for (result <- fullResults){
+      goals += result.scorers.count(_ == player)
+    }
+    goals
+  }
 }
