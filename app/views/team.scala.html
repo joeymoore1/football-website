@@ -3,13 +3,18 @@
 @(keepers: List[Player],defenders: List[Player], midfielders: List[Player], strikers: List[Player])
 
 @main("St Georges Team") {
-<div class="column-two-thirds">
-  <a class="navLink" href="@routes.HomeController.index()">Home Page</a>
-  </br></br>
-
-  <h1>The Team</h1>
-
-  </br></br>
+  <div class="max-width">
+    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
+    <h1 class="mainHeader">St Georges Football Club</h1>
+    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
+    <div class="topnav">
+      <a href="@routes.HomeController.index()">Home</a>
+      <a class="active" href="@routes.TeamController.team()">The Team</a>
+      <a href="@routes.FixturesController.index()">Fixtures</a>
+      <a href="@routes.ResultsController.index()">Results</a>
+    </div>
+    </br>
+    </br>
 
     <img src="@routes.Assets.versioned("images/teamPhoto.jpg")" style="width:660px;height:400px;">
     </br></br>
@@ -38,6 +43,6 @@
     <a>Strikers</a></br>
     @for(player <- strikers) {
     <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
-  }
-</div>
+    }
+  </div>
 }

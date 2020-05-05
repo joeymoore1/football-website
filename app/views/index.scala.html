@@ -3,13 +3,11 @@
 @main("Welcome to St Georges Official Website") {
 
   <div class="max-width">
-      <img src="@routes.Assets.versioned("images/badge.png")" class="topleft" style="width:200px;height:200px;">
-    <div class="mainHeader">
-      <h1>St Georges Football Club</h1>
-    </div>
-      <img src="@routes.Assets.versioned("images/badge.png")" class="topright" style="width:200px;height:200px;">
+      <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
+      <h1 class="mainHeader">St Georges Football Club</h1>
+      <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
     <div class="topnav">
-      <a class="active" href="#home">Home</a>
+      <a class="active" href="@routes.HomeController.index()">Home</a>
       <a href="@routes.TeamController.team()">The Team</a>
       <a href="@routes.FixturesController.index()">Fixtures</a>
       <a href="@routes.ResultsController.index()">Results</a>

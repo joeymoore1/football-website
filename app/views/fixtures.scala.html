@@ -2,15 +2,22 @@
 @(fixtures: List[Fixture])
 
 @main("Fixtures") {
-  <a class="navLink" href="@routes.HomeController.index()">Home Page</a>
-  </br></br>
+  <div class="max-width">
+    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
+    <h1 class="mainHeader">St Georges Football Club</h1>
+    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
+    <div class="topnav">
+      <a href="@routes.HomeController.index()">Home</a>
+      <a href="@routes.TeamController.team()">The Team</a>
+      <a class="active" href="@routes.FixturesController.index()">Fixtures</a>
+      <a href="@routes.ResultsController.index()">Results</a>
+    </div>
 
-  <h1>Fixtures</h1>
+    </br></br>
 
-  </br></br>
-
-  @for(fixture <- fixtures) {
-  <a>@fixture.venue match against @fixture.opponent on the @fixture.date </a>
-  </br>
-  }
+    @for(fixture <- fixtures) {
+    <a class="fixture">@fixture.venue match against @fixture.opponent on the @fixture.date </a>
+    </br>
+    }
+  </div>
 }

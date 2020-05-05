@@ -5,8 +5,9 @@
 .mainHeader {
     text-align: center;
     vertical-align: middle;
+    font-size: 150%;
     padding: 70px 0;
-    }
+}
 
 .text {
     font-size:25px;
@@ -16,12 +17,31 @@
   position: absolute;
   top: 11px;
   right: 15%;
+  width:200px;
+  height:200px;
 }
 
 .topleft {
   position: absolute;
   top: 11px;
   right: 75%;
+  width:200px;
+  height:200px;
+}
+
+.fixture {
+  padding:5px;
+  font-size: 18px;
+}
+
+.result {
+  padding:5px;
+  font-size:25px;
+}
+
+.resultPlayer {
+  padding:5px;
+  font-size:18px;
 }
 
 /* Add a black background color to the top navigation */
@@ -38,7 +58,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  width: 22%
+  width: 20%
 }
 
 /* Change the color of links on hover */
