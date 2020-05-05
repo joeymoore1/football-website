@@ -2,21 +2,20 @@
 
 @main("Welcome to St Georges Official Website") {
 
-  <div class="column-two-thirds">
-    <div>
-    <img src="@routes.Assets.versioned("images/badge.png")" style="width:200px;height:200px;">
-    <h1>St Georges Football Club</h1>
-    <img src="@routes.Assets.versioned("images/badge.png")" style="width:200px;height:200px;">
+  <div class="max-width">
+      <img src="@routes.Assets.versioned("images/badge.png")" class="topleft" style="width:200px;height:200px;">
+    <div class="mainHeader">
+      <h1>St Georges Football Club</h1>
     </div>
-    </br>
-    </br>
+      <img src="@routes.Assets.versioned("images/badge.png")" class="topright" style="width:200px;height:200px;">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="@routes.TeamController.team()">The Team</a>
+      <a href="@routes.FixturesController.index()">Fixtures</a>
+      <a href="@routes.ResultsController.index()">Results</a>
+    </div>
     </br>
     </br>
     <h2> The best football team hailing from St Georges Sports and Social Club</h2>
-    <div>
-    <a class="navLink" href="@routes.TeamController.team()">The Team</a>
-    <a class="navLink" href="@routes.FixturesController.index()">Fixtures</a>
-    <a class="navLink" href="@routes.ResultsController.index()">Results</a>
-    </div>
   </div>
 }

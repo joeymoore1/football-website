@@ -2,15 +2,59 @@
   padding-right:1em;
 }
 
-h1 {
-    display: inline;
-}
-
-.navLink {
-    font-size:20px;
-    padding-right:13em;
-}
+.mainHeader {
+    text-align: center;
+    vertical-align: middle;
+    padding: 70px 0;
+    }
 
 .text {
     font-size:25px;
+}
+
+.topright {
+  position: absolute;
+  top: 11px;
+  right: 15%;
+}
+
+.topleft {
+  position: absolute;
+  top: 11px;
+  right: 75%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 22%
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+div.max-width {
+  max-width: 75%;
+  margin: auto;
+  border: 3px solid #73AD21;
 }
