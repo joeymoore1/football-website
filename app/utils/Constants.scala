@@ -34,13 +34,19 @@ object Constants {
   val midfielders: List[Player] = fullTeam.players.filter(_.position.equals("Midfielder"))
   val strikers: List[Player] = fullTeam.players.filter(_.position.equals("Striker"))
 
-  val matchAgainstJuniors: Team = Team(List(chad, matt, ben, ryan, adam, ian, joey, rhys))
-  val matchAgainstLiverpool: Team = Team(List(chad, kieran, ben, ryan, curt, callum, joey, zoltan))
+  val matchAgainstPheasant: Team = Team(List(chad, mark, matt, dave, kieran, ewan, ryan, ian, curt, ben, zoltan, joey, josh, adam, gaz, callum).sortBy(_.name.lastName))
+  val matchAgainstWrockwardine: Team = Team(List(chad, mark, ben, matt, dave, curt, ryan, adam, rhys, joey, zoltan, josh, kieran, callum, ian).sortBy(_.name.lastName))
+  val matchAgainstWrockwardine2: Team = Team(List(chad, mark, matt, ben, kieran, ryan, adam, curt, ian, joey, rhys, zoltan, dave, callum, josh).sortBy(_.name.lastName))
+  val matchAgainstLawley: Team = Team(List(chad, mark, dave, ben, kieran, ian, ryan, curt, rhys, joey, adam).sortBy(_.name.lastName))
+  val matchAgainstLion: Team = Team(List(chad, mark, dave, ben, layton, adam, curt, ian, ryan, rhys, matt, kieran, callum).sortBy(_.name.lastName))
 
-  val result1: Result = Result(1, matchAgainstJuniors, "Telford Juniors", 4, 1, List(joey, rhys, joey, curt))
-  val result2: Result = Result(2, matchAgainstLiverpool, "Liverpool FC", 1, 9, List(rhys))
+  val result1: Result = Result(1, matchAgainstPheasant, "Pheasant FC", 3, 2, List(joey, ben, joey))
+  val result2: Result = Result(2, matchAgainstWrockwardine, "Wrockwardine Wood", 4, 6, List(rhys, rhys, joey, josh))
+  val result3: Result = Result(3, matchAgainstWrockwardine2, "Wrockwardine Wood", 3, 4, List(joey, rhys, joey))
+  val result4: Result = Result(4, matchAgainstLawley, "Lawley Lightmoor Comets", 6, 0, List(joey, joey, joey, curt, curt, rhys))
+  val result5: Result = Result(5, matchAgainstLion, "Lion FC", 2, 4, List(curt, ryan))
 
-  val fullResults: List[Result] = List(result1, result2)
+  val fullResults: List[Result] = List(result1, result2, result3, result4, result5)
 
   val game1:Fixture = Fixture("Manchester City", "9th February 2020", "Home")
   val game2:Fixture = Fixture("Telford Juniors", "16th February 2020", "Away")
