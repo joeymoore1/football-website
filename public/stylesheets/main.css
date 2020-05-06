@@ -4,9 +4,12 @@
 
 .mainHeader {
     text-align: center;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     font-size: 150%;
-    padding: 70px 0;
+    /* padding: 70px 0; */
+    position: absolute;
+    top: 4rem;
+    width: 100%;
 }
 
 .text {
@@ -15,16 +18,16 @@
 
 .topright {
   position: absolute;
-  top: 11px;
-  right: 15%;
+  top: 0.25rem;
+  right: 0.25rem;
   width:200px;
   height:200px;
 }
 
 .topleft {
-  position: absolute;
-  top: 11px;
-  right: 75%;
+  /* position: absolute; */
+  top: 0.25rem;
+  left: 0.25rem;
   width:200px;
   height:200px;
 }
@@ -77,4 +80,5 @@ div.max-width {
   max-width: 75%;
   margin: auto;
   border: 3px solid #73AD21;
+  position: relative;
 }
