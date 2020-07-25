@@ -1,8 +1,8 @@
 @import models.Result
 
-@(results: List[Result])
+@(goalScorers: List[GoalsPerScorer])
 
-@main("St Georges Results") {
+@main("Result") {
   <div class="max-width">
     <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
     <h1 class="mainHeader">St Georges Football Club</h1>
@@ -14,13 +14,12 @@
       <a class="active" href="@routes.ResultsController.index()">Results</a>
       <a href="@routes.StatsController.index()">Stats</a>
     </div>
+    <h1>Stats Page</h1>
 
-    <h1>Recent results</h1>
-    </br> </br>
-
-
-    @for(result <- results) {
-    <a class="result" href="@routes.ResultController.index(result.index)">St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</a>
+    <h2>Top Goalscorers</h2>
+    @for(player <- goalScorers) {
+    <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName</a>
+    <a>@player.goals</a>
     </br>
     }
 

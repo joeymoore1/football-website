@@ -32,7 +32,7 @@ object Constants {
 
   val matchAgainstExample: Team = Team(List(chad, mark, matt, dave, ben, zoltan, joey, josh, adam, callum).sortBy(_.name.lastName))
 
-  val result1: Result = Result(1, matchAgainstExample, "Example Result", 3, 2, List(joey, ben, joey))
+  val result1: Result = Result(1, matchAgainstExample, "Example Result", 7, 2, List(joey, ben, joey, callum, rhys, rhys, rhys))
 
   val fullResults: List[Result] = List(result1)
 
@@ -46,5 +46,9 @@ object Constants {
       goals += result.scorers.count(_ == player)
     }
     goals
+  }
+
+  def goalscorerList(players:List[Player]):List[GoalsPerScorer] = {
+    players.map(l => GoalsPerScorer(l, getGoalsForPlayer(l)))
   }
 }

@@ -6,6 +6,8 @@ GET     /fixtures                   controllers.FixturesController.index()
 
 GET     /results                    controllers.ResultsController.index()
 
+GET     /stats                      controllers.StatsController.index()
+
 GET     /profile/:id                controllers.ProfileController.index(id: Int)
 
 GET     /result/:id                 controllers.ResultController.index(id: Int)
