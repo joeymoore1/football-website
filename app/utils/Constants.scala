@@ -11,7 +11,7 @@ object Constants {
   val rhys: Player = Player(5, Name("Rhys","Clarkson"), "Striker")
   val adam: Player = Player(6, Name("Adam","Fox"), "Midfielder")
   val dave: Player = Player(7, Name("David","Boden"), "Defender")
-  val zoltan: Player = Player(8, Name("Zoltan","KanizsaI-Nagy"), "Striker")
+  val lee: Player = Player(8, Name("Lee","Western"), "Defender")
   val mark: Player = Player(10, Name("Mark","Betteridge"), "Defender")
   val josh: Player = Player(11, Name("Josh","Dodd"), "Midfielder")
   val aaron: Player = Player(12, Name("Arran","Moore"), "Midfielder")
@@ -21,24 +21,30 @@ object Constants {
   val callum: Player = Player(16, Name("Callum","Wilson"), "Striker")
   val kyle: Player = Player(17, Name("Kyle","Jordan"), "Midfielder")
   val jack: Player = Player(18, Name("Jack","Tarpey"), "Midfielder")
+  val daveJnr: Player = Player(19, Name("Dave","Jnr"), "Striker")
+  val ryan: Player = Player(20, Name("Ryan","Thompson"), "Defender")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, josh, aaron, ashley, joey,rhys, zoltan, kyle, jack).sortBy(_.name.lastName))
+    adam, callum, josh, aaron, ashley, joey,rhys, kyle, jack, daveJnr, ryan, lee).sortBy(_.name.lastName))
 
   val keepers: List[Player] = fullTeam.players.filter(_.position.equals("Keeper"))
   val defenders: List[Player] = fullTeam.players.filter(_.position.equals("Defender"))
   val midfielders: List[Player] = fullTeam.players.filter(_.position.equals("Midfielder"))
   val strikers: List[Player] = fullTeam.players.filter(_.position.equals("Striker"))
 
-  val matchAgainstExample: Team = Team(List(chad, mark, matt, dave, ben, zoltan, joey, josh, adam, callum).sortBy(_.name.lastName))
+  val matchAgainstWellingtonKB: Team = Team(List(chad, dean, matt, rhys, dave, callum, jack, adam, josh, mark, ben, layton, daveJnr, ryan).sortBy(_.name.lastName))
 
-  val result1: Result = Result(1, matchAgainstExample, "Example Result", 7, 2, List(joey, ben, joey, callum, rhys, rhys, rhys))
+  val result1: Result = Result(1, matchAgainstWellingtonKB, "Wellington KB", 4, 3, List(daveJnr, daveJnr, callum, daveJnr))
 
   val fullResults: List[Result] = List(result1)
 
-  val game1:Fixture = Fixture("Example Fixture", "9th February 2020", "Home")
+  val game1:Fixture = Fixture("Crown FC", "29th July 2020", "Away")
+  val game2:Fixture = Fixture("Beckbury FC", "2nd August 2020", "Home")
+  val game3:Fixture = Fixture("Unknown Team", "5th August 2020", "Away")
+  val game4:Fixture = Fixture("Britannia FC", "27th August 2020", "Away")
 
-  val fullFixtures: List[Fixture] = List(game1)
+
+  val fullFixtures: List[Fixture] = List(game1, game2, game3, game4)
 
   def getGoalsForPlayer(player: Player): Int = {
     var goals = 0
