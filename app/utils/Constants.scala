@@ -21,7 +21,7 @@ object Constants {
   val callum: Player = Player(16, Name("Callum","Wilson"), "Striker")
   val kyle: Player = Player(17, Name("Kyle","Jordan"), "Midfielder")
   val jack: Player = Player(18, Name("Jack","Tarpey"), "Midfielder")
-  val daveJnr: Player = Player(19, Name("Dave","Jnr"), "Striker")
+  val daveJnr: Player = Player(19, Name("David","Easthope"), "Striker")
   val ryan: Player = Player(20, Name("Ryan","Thompson"), "Defender")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,

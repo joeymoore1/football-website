@@ -1,6 +1,6 @@
 @import models.Result
 
-@(goalScorers: List[GoalsPerScorer])
+@(topGoalscorer: GoalsPerScorer, goalScorers: List[GoalsPerScorer])
 
 @main("Result") {
   <div class="max-width">
@@ -16,10 +16,15 @@
     </div>
     <h1>Stats Page</h1>
 
-    <h2>Top Goalscorers</h2>
+    <h2>Top Goalscorer</h2>
+    <a href="@routes.ProfileController.index(topGoalscorer.player.index)">@topGoalscorer.player.name.firstName @topGoalscorer.player.name.lastName: @topGoalscorer.goals</a>
+    </br>
+    <img src="@routes.Assets.versioned(s"images/${topGoalscorer.player.name.firstName} ${topGoalscorer.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
+    </br>
+
+    <h2>Other Goalscorers</h2>
     @for(player <- goalScorers) {
-    <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName</a>
-    <a>@player.goals</a>
+    <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.goals</a>
     </br>
     }
 

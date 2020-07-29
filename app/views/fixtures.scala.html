@@ -14,7 +14,9 @@
       <a href="@routes.StatsController.index()">Stats</a>
     </div>
 
-    </br></br>
+
+    <h1>Upcoming Fixtures</h1>
+    </br>
 
     @for(fixture <- fixtures) {
     <a class="fixture">@fixture.venue match against @fixture.opponent on the @fixture.date </a>
