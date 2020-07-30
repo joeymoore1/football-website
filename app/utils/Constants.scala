@@ -33,18 +33,19 @@ object Constants {
   val strikers: List[Player] = fullTeam.players.filter(_.position.equals("Striker"))
 
   val matchAgainstWellingtonKB: Team = Team(List(chad, dean, matt, rhys, dave, callum, jack, adam, josh, mark, ben, layton, daveJnr, ryan).sortBy(_.name.lastName))
+  val matchAgainstCrownFC: Team = Team(List(chad, dave, layton, matt, ben, mark, jack, kyle, adam, rhys, callum, ryan, josh, dean).sortBy(_.name.lastName))
 
   val result1: Result = Result(1, matchAgainstWellingtonKB, "Wellington KB", 4, 3, List(daveJnr, daveJnr, callum, daveJnr))
+  val result2: Result = Result(2, matchAgainstCrownFC, "Crown FC", 2, 1, List(callum, jack))
 
-  val fullResults: List[Result] = List(result1)
+  val fullResults: List[Result] = List(result1, result2)
 
-  val game1:Fixture = Fixture("Crown FC", "29th July 2020", "Away")
-  val game2:Fixture = Fixture("Beckbury FC", "2nd August 2020", "Home")
+  val game2:Fixture = Fixture("Nathens Team", "2nd August 2020", "Away")
   val game3:Fixture = Fixture("Unknown Team", "5th August 2020", "Away")
   val game4:Fixture = Fixture("Britannia FC", "27th August 2020", "Away")
 
 
-  val fullFixtures: List[Fixture] = List(game1, game2, game3, game4)
+  val fullFixtures: List[Fixture] = List(game2, game3, game4)
 
   def getGoalsForPlayer(player: Player): Int = {
     var goals = 0
