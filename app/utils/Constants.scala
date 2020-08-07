@@ -45,8 +45,9 @@ object Constants {
 
 //  ******** FIXTURES ********
 
-  val game4: Fixture = Fixture("Britannia FC", "27th August 2020", "Away")
+  val game1: Fixture = Fixture("AFC DUB", "16th August 2020", "Away")
+  val game2: Fixture = Fixture("Britannia FC", "27th August 2020", "Away")
 
-  val fullFixtures: List[Fixture] = List(game4)
+  val fullFixtures: List[Fixture] = List(game1, game2)
 
 }
