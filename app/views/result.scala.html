@@ -22,7 +22,7 @@
 
     @for(player <- result.homeTeam.players) {
     <a class="resultPlayer" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
-    @result.scorers.filter(_ == player).map(_ => Html(s""" <img width=10 src="${routes.Assets.versioned("images/football.png")}">"""))
+    @result.scorers.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/football.png")}">"""))
     </br>
     }
   </div>
