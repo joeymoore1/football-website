@@ -18,7 +18,8 @@
     <h1>Result against @result.awayTeam</h1>
     </br>
 
-    <h2>St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</h2>
+
+    <h1>St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</h1>
 
     @for(player <- result.homeTeam.players) {
     <a class="resultPlayer" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
