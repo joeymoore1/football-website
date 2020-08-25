@@ -24,9 +24,11 @@ object Constants {
   val jack: Player = Player(18, Name("Jack","Tarpey"), "Midfielder")
   val daveJnr: Player = Player(19, Name("David","Easthope"), "Striker")
   val ryan: Player = Player(20, Name("Ryan","Thompson"), "Defender")
+  val adRowley: Player = Player(21, Name("Adam","Rowley"), "Defender")
+  val chambo: Player = Player(22, Name("Adam","Chamberlain"), "Midfielder")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, aaron, ashley, joey,rhys, kyle, jack, daveJnr, ryan, lee).sortBy(_.name.lastName))
+    adam, callum, aaron, ashley, joey,rhys, kyle, jack, daveJnr, ryan, lee, chambo, adRowley).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
@@ -36,14 +38,14 @@ object Constants {
   val matchAgainstCrownFC: Team = Team(List(chad, dave, layton, matt, ben, mark, jack, kyle, adam, rhys, callum, ryan, dean).sortBy(_.name.lastName))
   val result2: Result = Result(2, matchAgainstCrownFC, "Crown FC", 2, 1, List(callum, jack))
 
-  val matchAgainstNCUnited: Team = Team(List(kyle, jack, callum, rhys, matt, dean, daveJnr, dave, mark, ben, layton).sortBy(_.name.lastName))
+  val matchAgainstNCUnited: Team = Team(List(kyle, jack, callum, rhys, matt, dean, daveJnr, dave, mark, ben, layton, adRowley).sortBy(_.name.lastName))
   val result3: Result = Result(3, matchAgainstNCUnited, "NC United", 5, 3, List(rhys, callum, matt, callum, daveJnr))
 
-  val matchAgainstAFCDub: Team = Team(List(joey, callum, jack, rhys, dean, matt, chad, ryan, layton, adam, dave, daveJnr, kyle).sortBy(_.name.lastName))
+  val matchAgainstAFCDub: Team = Team(List(joey, callum, jack, rhys, dean, matt, chad, ryan, layton, adam, dave, daveJnr, kyle, chambo).sortBy(_.name.lastName))
   val result4: Result = Result(4, matchAgainstAFCDub, "AFC Dub", 2, 3, List(joey, callum))
 
-  val matchAgainstBritannia: Team = Team(List(joey, dean, daveJnr, dave, rhys, layton, matt, ben, mark, jack, adam).sortBy(_.name.lastName))
-  val result5: Result = Result(4, matchAgainstBritannia, "Britannia FC", 1, 8, List(joey))
+  val matchAgainstBritannia: Team = Team(List(joey, dean, daveJnr, dave, rhys, layton, matt, ben, mark, jack, adam, chambo, adRowley).sortBy(_.name.lastName))
+  val result5: Result = Result(5, matchAgainstBritannia, "Britannia FC", 1, 8, List(joey))
 
   val fullResults: List[Result] = List(result1, result2, result3, result4, result5)
 
