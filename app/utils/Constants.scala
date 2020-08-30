@@ -53,7 +53,7 @@ object Constants {
   val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6)
 
 
-//  ******** FIXTURES ********
+//  ******** FIXTURES *********
 
   val cannockFixture: Fixture = Fixture("Cannock Team", "6th September 2020", "Home")
 
