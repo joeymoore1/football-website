@@ -50,13 +50,15 @@ object Constants {
   val matchAgainstImpact: Team = Team(List(joey, daveJnr, dave, rhys, layton, matt, ben, mark, jack, kyle, callum, adRowley, chad).sortBy(_.name.lastName))
   val result6: Result = Result(6, matchAgainstImpact, "Impact FC", 7, 2, List(joey, callum, callum, callum, rhys, kyle, daveJnr))
 
-  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6)
+  val matchAgainstTSS: Team = Team(List(chad, mark, ben, layton, dave, matt, jack, rhys, daveJnr, kyle, joey, adRowley, adam).sortBy(_.name.lastName))
+  val result7: Result = Result(7, matchAgainstTSS, "TSS", 3, 7, List(joey, daveJnr, daveJnr))
+
+  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7)
 
 
 //  ******** FIXTURES *********
 
-  val cannockFixture: Fixture = Fixture("Cannock Team", "6th September 2020", "Home")
 
-  val fullFixtures: List[Fixture] = List(cannockFixture)
+  val fullFixtures: List[Fixture] = List()
 
 }
