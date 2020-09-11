@@ -1,11 +1,12 @@
 @import models.Fixture
+@import java.time.format.DateTimeFormatter
+@import java.time.LocalDate
+
 @(fixtures: List[Fixture])
 
+@formatDate(date:LocalDate) = @{date.format(DateTimeFormatter.ofPattern("E dd MMMM"))}
+
 @main("Fixtures") {
-  <div class="max-width">
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
-    <h1 class="mainHeader">St Georges Football Club</h1>
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
     <div class="topnav">
       <a href="@routes.HomeController.index()">Home</a>
       <a href="@routes.TeamController.team()">The Team</a>
@@ -13,14 +14,14 @@
       <a href="@routes.ResultsController.index()">Results</a>
       <a href="@routes.StatsController.index()">Stats</a>
     </div>
-
+    <main>
 
     <h1>Upcoming Fixtures</h1>
     </br>
 
     @for(fixture <- fixtures) {
-    <a class="fixture">@fixture.venue match against @fixture.opponent on the @fixture.date </a>
+    <a class="fixture">@formatDate(fixture.date): @fixture.opponent at @fixture.venue</a>
     </br>
     }
-  </div>
+    </main>
 }

@@ -1,3 +1,5 @@
 package models
 
-case class Fixture(opponent: String, date: String, venue:String)
+import java.time.LocalDate
+
+case class Fixture(opponent: String, date: LocalDate, venue:String)

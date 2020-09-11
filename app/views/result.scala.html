@@ -1,12 +1,11 @@
 @import models.Result
+@import java.time.format.DateTimeFormatter
+@import java.time.LocalDate
 
 @(result: Result)
+@formatDate(date:LocalDate) = @{date.format(DateTimeFormatter.ofPattern("E, dd MMMM yyyy"))}
 
 @main("Result") {
-  <div class="max-width">
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
-    <h1 class="mainHeader">St Georges Football Club</h1>
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
     <div class="topnav">
       <a href="@routes.HomeController.index()">Home</a>
       <a href="@routes.TeamController.team()">The Team</a>
@@ -14,17 +13,16 @@
       <a class="active" href="@routes.ResultsController.index()">Results</a>
       <a href="@routes.StatsController.index()">Stats</a>
     </div>
+    <main>
+      <h1>Result against @result.awayTeam</h1>
+      <h1>Date: @formatDate(result.date)</h1>
 
-    <h1>Result against @result.awayTeam</h1>
-    </br>
+      <h1>St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</h1>
 
-
-    <h1>St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</h1>
-
-    @for(player <- result.homeTeam.players) {
-    <a class="resultPlayer" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
-    @result.scorers.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/football.png")}">"""))
-    </br>
-    }
-  </div>
+      @for(player <- result.homeTeam.players) {
+      <a class="resultPlayer" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
+      @result.scorers.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/football.png")}">"""))
+      </br>
+      }
+    </main>
 }

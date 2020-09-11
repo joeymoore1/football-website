@@ -1,11 +1,8 @@
 package service
 
 import javax.inject.Inject
-import models.{Player, Result}
+import models.Player
 import utils.Constants._
-import slick.jdbc.MySQLProfile.api._
-import slick.jdbc.MySQLProfile
-import slick.jdbc.JdbcProfile
 
 class ProfileService @Inject()() {
 
@@ -26,17 +23,4 @@ class ProfileService @Inject()() {
     }
     goals
   }
-
-  class MySQLService(jdbcUrl: String, dbUser: String, dbPassword: String) {
-
-    // Setup our database driver, Postgres in this case
-    //  val driver: JdbcProfile = PostgresDriver
-    val driver: JdbcProfile = MySQLProfile
-
-    // Create a database connection
-    val db: Database = Database.forURL(jdbcUrl, dbUser, dbPassword)
-    db.createSession()
-  }
-
-
 }

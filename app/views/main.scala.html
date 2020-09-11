@@ -18,8 +18,12 @@
     <body>
         @* And here's where we render the `Html` object containing
          * the page content. *@
+        <div class="max-width">
+            <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
+            <h1 class="mainHeader">St Georges Football Club</h1>
+            <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
         @content
-
+        </div>
       <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
     </body>
 </html>

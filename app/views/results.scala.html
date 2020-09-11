@@ -1,12 +1,14 @@
 @import models.Result
+@import java.time.format.DateTimeFormatter
+@import java.time.LocalDate
 
 @(results: List[Result])
 
+@months = @{results.map(_.date.format(DateTimeFormatter.ofPattern("MMMM"))).distinct}
+@formatDate(date:LocalDate) = @{date.format(DateTimeFormatter.ofPattern("E, dd"))}
+@filterResults(month: String) = @{results.filter(_.date.format(DateTimeFormatter.ofPattern("MMMM")) == month)}
+
 @main("St Georges Results") {
-  <div class="max-width">
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
-    <h1 class="mainHeader">St Georges Football Club</h1>
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
     <div class="topnav">
       <a href="@routes.HomeController.index()">Home</a>
       <a href="@routes.TeamController.team()">The Team</a>
@@ -14,15 +16,14 @@
       <a class="active" href="@routes.ResultsController.index()">Results</a>
       <a href="@routes.StatsController.index()">Stats</a>
     </div>
-
+    <main>
     <h1>Recent results</h1>
-    </br>
-
-
-    @for(result <- results) {
-    <a class="result" href="@routes.ResultController.index(result.index)">St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</a>
+    @for(month <- months) {
+    <h2>@month</h2>
+    @for(result <- filterResults(month)){
+    @formatDate(result.date) <a class="result" href="@routes.ResultController.index(result.index)">St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</a>
     </br>
     }
-
-  </div>
+    }
+    </main>
 }

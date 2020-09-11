@@ -3,10 +3,6 @@
 @(topGoalscorer: GoalsPerScorer, goalScorers: List[GoalsPerScorer])
 
 @main("Result") {
-  <div class="max-width">
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
-    <h1 class="mainHeader">St Georges Football Club</h1>
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
     <div class="topnav">
       <a href="@routes.HomeController.index()">Home</a>
       <a href="@routes.TeamController.team()">The Team</a>
@@ -14,6 +10,7 @@
       <a href="@routes.ResultsController.index()">Results</a>
       <a class="active" href="@routes.StatsController.index()">Stats</a>
     </div>
+    <main>
     <h1>Stats Page</h1>
 
     <h2>Top Goalscorer</h2>
@@ -27,6 +24,5 @@
     <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.goals</a>
     </br>
     }
-
-  </div>
+    </main>
 }

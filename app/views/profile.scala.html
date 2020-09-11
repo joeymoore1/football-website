@@ -2,11 +2,6 @@
 @(player: Player, appearances: Int, goals: Int)
 
 @main("Player Profile") {
-
-  <div class="max-width">
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topleft">
-    <h1 class="mainHeader">St Georges Football Club</h1>
-    <img src="@routes.Assets.versioned("images/badge.png")" class="topright">
     <div class="topnav">
       <a href="@routes.HomeController.index()">Home</a>
       <a class="active" href="@routes.TeamController.team()">The Team</a>
@@ -14,6 +9,7 @@
       <a href="@routes.ResultsController.index()">Results</a>
       <a href="@routes.StatsController.index()">Stats</a>
     </div>
+    <main>
     <h1>@player.name.firstName @player.name.lastName's Profile</h1>
     </br>
 
@@ -24,5 +20,5 @@
     <a>Goals: @goals</a>
     </br>
     <img src="@routes.Assets.versioned(s"images/${player.name.firstName} ${player.name.lastName}.jpg")" style="padding:10px;width:300px;height:300px;">
-  </div>
+    </main>
 }

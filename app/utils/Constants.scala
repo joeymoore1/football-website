@@ -1,5 +1,7 @@
 package utils
 
+import java.time.{LocalDate, LocalDateTime}
+
 import models._
 
 object Constants {
@@ -33,32 +35,33 @@ object Constants {
   //  ******** RESULTS ********
 
   val matchAgainstWellingtonKB: Team = Team(List(chad, dean, matt, rhys, dave, callum, jack, adam, mark, ben, layton, daveJnr, ryan).sortBy(_.name.lastName))
-  val result1: Result = Result(1, matchAgainstWellingtonKB, "Wellington KB", 4, 3, List(daveJnr, daveJnr, callum, daveJnr))
+  val result1: Result = Result(1, matchAgainstWellingtonKB, "Wellington KB", 4, 3, List(daveJnr, daveJnr, callum, daveJnr), LocalDate.parse("2020-07-26"))
 
   val matchAgainstCrownFC: Team = Team(List(chad, dave, layton, matt, ben, mark, jack, kyle, adam, rhys, callum, ryan, dean).sortBy(_.name.lastName))
-  val result2: Result = Result(2, matchAgainstCrownFC, "Crown FC", 2, 1, List(callum, jack))
+  val result2: Result = Result(2, matchAgainstCrownFC, "Crown FC", 2, 1, List(callum, jack), LocalDate.parse("2020-07-29"))
 
   val matchAgainstNCUnited: Team = Team(List(kyle, jack, callum, rhys, matt, dean, daveJnr, dave, mark, ben, layton, adRowley).sortBy(_.name.lastName))
-  val result3: Result = Result(3, matchAgainstNCUnited, "NC United", 5, 3, List(rhys, callum, matt, callum, daveJnr))
+  val result3: Result = Result(3, matchAgainstNCUnited, "NC United", 5, 3, List(rhys, callum, matt, callum, daveJnr), LocalDate.parse("2020-08-05"))
 
   val matchAgainstAFCDub: Team = Team(List(joey, callum, jack, rhys, dean, matt, chad, ryan, layton, adam, dave, daveJnr, kyle, chambo).sortBy(_.name.lastName))
-  val result4: Result = Result(4, matchAgainstAFCDub, "AFC Dub", 2, 3, List(joey, callum))
+  val result4: Result = Result(4, matchAgainstAFCDub, "AFC Dub", 2, 3, List(joey, callum), LocalDate.parse("2020-08-16"))
 
   val matchAgainstBritannia: Team = Team(List(joey, dean, daveJnr, dave, rhys, layton, matt, ben, mark, jack, adam, chambo, adRowley).sortBy(_.name.lastName))
-  val result5: Result = Result(5, matchAgainstBritannia, "Britannia FC", 1, 8, List(joey))
+  val result5: Result = Result(5, matchAgainstBritannia, "Britannia FC", 1, 8, List(joey), LocalDate.parse("2020-08-23"))
 
   val matchAgainstImpact: Team = Team(List(joey, daveJnr, dave, rhys, layton, matt, ben, mark, jack, kyle, callum, adRowley, chad).sortBy(_.name.lastName))
-  val result6: Result = Result(6, matchAgainstImpact, "Impact FC", 7, 2, List(joey, callum, callum, callum, rhys, kyle, daveJnr))
+  val result6: Result = Result(6, matchAgainstImpact, "Impact FC", 7, 2, List(joey, callum, callum, callum, rhys, kyle, daveJnr), LocalDate.parse("2020-08-30"))
 
   val matchAgainstTSS: Team = Team(List(chad, mark, ben, layton, dave, matt, jack, rhys, daveJnr, kyle, joey, adRowley, adam).sortBy(_.name.lastName))
-  val result7: Result = Result(7, matchAgainstTSS, "TSS", 3, 7, List(joey, daveJnr, daveJnr))
+  val result7: Result = Result(7, matchAgainstTSS, "TSS", 3, 7, List(joey, daveJnr, daveJnr), LocalDate.parse("2020-09-06"))
 
-  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7)
+  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7).reverse
 
 
 //  ******** FIXTURES *********
 
+  val fixture1 = Fixture("Wellington KB", LocalDate.parse("2020-09-13"), "Ketley Bank")
 
-  val fullFixtures: List[Fixture] = List()
+  val fullFixtures: List[Fixture] = List(fixture1)
 
 }
