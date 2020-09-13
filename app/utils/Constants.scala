@@ -1,6 +1,6 @@
 package utils
 
-import java.time.{LocalDate, LocalDateTime}
+import java.time.LocalDate
 
 import models._
 
@@ -15,22 +15,21 @@ object Constants {
   val rhys: Player = Player(5, Name("Rhys","Clarkson"), "Striker")
   val adam: Player = Player(6, Name("Adam","Fox"), "Midfielder")
   val dave: Player = Player(7, Name("David","Boden"), "Defender")
-  val lee: Player = Player(8, Name("Lee","Western"), "Defender")
-  val mark: Player = Player(10, Name("Mark","Betteridge"), "Defender")
-  val aaron: Player = Player(12, Name("Arran","Moore"), "Midfielder")
-  val ashley: Player = Player(13, Name("Ashley","Moore"), "Midfielder")
-  val layton: Player = Player(14, Name("Layton","Reynolds"), "Defender")
-  val dean: Player = Player(15, Name("Dean","Ridley"), "Defender")
-  val callum: Player = Player(16, Name("Callum","Wilson"), "Striker")
-  val kyle: Player = Player(17, Name("Kyle","Jordan"), "Midfielder")
-  val jack: Player = Player(18, Name("Jack","Tarpey"), "Midfielder")
-  val daveJnr: Player = Player(19, Name("David","Easthope"), "Striker")
-  val ryan: Player = Player(20, Name("Ryan","Thompson"), "Defender")
-  val adRowley: Player = Player(21, Name("Adam","Rowley"), "Defender")
-  val chambo: Player = Player(22, Name("Adam","Chamberlain"), "Midfielder")
+  val mark: Player = Player(8, Name("Mark","Betteridge"), "Defender")
+  val aaron: Player = Player(9, Name("Arran","Moore"), "Midfielder")
+  val layton: Player = Player(10, Name("Layton","Reynolds"), "Defender")
+  val dean: Player = Player(11, Name("Dean","Ridley"), "Defender")
+  val callum: Player = Player(12, Name("Callum","Wilson"), "Striker")
+  val kyle: Player = Player(13, Name("Kyle","Jordan"), "Midfielder")
+  val jack: Player = Player(14, Name("Jack","Tarpey"), "Midfielder")
+  val daveJnr: Player = Player(15, Name("David","Easthope"), "Striker")
+  val ryan: Player = Player(16, Name("Ryan","Thompson"), "Defender")
+  val adRowley: Player = Player(17, Name("Adam","Rowley"), "Defender")
+  val chambo: Player = Player(18, Name("Adam","Chamberlain"), "Midfielder")
+  val daveJones: Player = Player(19, Name("Dave","Jones"), "Midfielder")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, aaron, ashley, joey,rhys, kyle, jack, daveJnr, ryan, lee, chambo, adRowley).sortBy(_.name.lastName))
+    adam, callum, aaron, joey,rhys, kyle, jack, daveJnr, ryan, chambo, adRowley, daveJones).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
@@ -55,13 +54,14 @@ object Constants {
   val matchAgainstTSS: Team = Team(List(chad, mark, ben, layton, dave, matt, jack, rhys, daveJnr, kyle, joey, adRowley, adam).sortBy(_.name.lastName))
   val result7: Result = Result(7, matchAgainstTSS, "TSS", 3, 7, List(joey, daveJnr, daveJnr), LocalDate.parse("2020-09-06"))
 
-  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7).reverse
+  val matchAgainstWellyKB: Team = Team(List(chad, ben, dave, adam, rhys, aaron, kyle, joey, daveJnr, callum).sortBy(_.name.lastName))
+  val result8: Result = Result(8, matchAgainstWellyKB, "Wellington KB", 5, 6, List(daveJnr, daveJnr, callum, callum), LocalDate.parse("2020-09-13"))
+
+  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7, result8).reverse
 
 
 //  ******** FIXTURES *********
 
-  val fixture1 = Fixture("Wellington KB", LocalDate.parse("2020-09-13"), "Ketley Bank")
-
-  val fullFixtures: List[Fixture] = List(fixture1)
+  val fullFixtures: List[Fixture] = List()
 
 }
