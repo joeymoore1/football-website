@@ -4,7 +4,9 @@
 
 @(fixtures: List[Fixture])
 
-@formatDate(date:LocalDate) = @{date.format(DateTimeFormatter.ofPattern("E dd MMMM"))}
+@months = @{fixtures.map(_.date.format(DateTimeFormatter.ofPattern("MMMM"))).distinct}
+@formatDate(date:LocalDate) = @{date.format(DateTimeFormatter.ofPattern("E, dd"))}
+@filterResults(month: String) = @{fixtures.filter(_.date.format(DateTimeFormatter.ofPattern("MMMM")) == month)}
 
 @main("Fixtures") {
     <div class="topnav">
@@ -16,12 +18,15 @@
     </div>
     <main>
 
-    <h1>Upcoming Fixtures</h1>
-    </br>
 
-    @for(fixture <- fixtures) {
-    <a class="fixture">@formatDate(fixture.date): @fixture.opponent at @fixture.venue</a>
+
+    <h1>Upcoming Fixtures</h1>
+    @for(month <- months) {
+    <h2>@month</h2>
+    @for(fixture <- filterResults(month)){
+    <a class="fixture">@formatDate(fixture.date) :</a><b class="fixture">@fixture.opponent</b><a class="fixture">at @fixture.venue</a>
     </br>
     }
+        }
     </main>
 }
