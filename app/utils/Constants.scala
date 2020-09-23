@@ -25,15 +25,16 @@ object Constants {
   val ryan: Player = Player(16, Name("Ryan","Thompson"), "Defender")
   val adRowley: Player = Player(17, Name("Adam","Rowley"), "Defender")
   val daveJones: Player = Player(19, Name("Dave","Jones"), "Midfielder")
+  val tom: Player = Player(20, Name("Tom","Quinn"), "Defender")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, aaron, joey,rhys, kyle, jack, ryan, adRowley, daveJones).sortBy(_.name.lastName))
+    adam, callum, aaron, joey,rhys, kyle, jack, ryan, adRowley, daveJones, tom).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
-  val matchAgainstShifnalImperials: Team = Team(List(chad, dave, ben, matt, adam, jack, daveJones, aaron, joey, callum, adRowley).sortBy(_.name.lastName))
-//  Other players were Tom Quinn, aarons mate kieran and cav
-  val shifnalImperialsResult: Result = Result(1, matchAgainstShifnalImperials, "Shifnal Imperials", 2, 3, List(joey), LocalDate.parse("2020-09-20"))
+  val matchAgainstShifnalImperials: Team = Team(List(chad, dave, ben, matt, adam, jack, daveJones, aaron, joey, callum, adRowley, tom).sortBy(_.name.lastName))
+//  Other players were aarons mate kieran and cav
+  val shifnalImperialsResult: Result = Result(1, matchAgainstShifnalImperials, "Shifnal Imperials", 2, 3, List(joey), List(daveJones, chad), LocalDate.parse("2020-09-20"))
 
   val fullResults: List[Result] = List(shifnalImperialsResult).reverse
 

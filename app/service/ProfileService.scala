@@ -14,6 +14,7 @@ class ProfileService @Inject()() {
   def getAppearances(player: Player): Int = {
     val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
     filterResultsByPlayer.size
+//    fullResults.count(_.homeTeam.players.contains(player))
   }
 
   def getGoalsForPlayer(player: Player): Int = {
@@ -22,5 +23,13 @@ class ProfileService @Inject()() {
       goals += result.scorers.count(_ == player)
     }
     goals
+  }
+
+  def getAssistsForPlayer(player: Player): Int = {
+    var assists = 0
+    for (result <- fullResults){
+      assists += result.assists.count(_ == player)
+    }
+    assists
   }
 }
