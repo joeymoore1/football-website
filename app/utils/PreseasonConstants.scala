@@ -4,7 +4,7 @@ import java.time.LocalDate
 
 import models._
 
-object PreSeasonConstants {
+object PreseasonConstants {
 
   //  ******** PLAYERS ********
 
@@ -55,7 +55,7 @@ object PreSeasonConstants {
   val result7: Result = Result(7, matchAgainstTSS, "TSS", 3, 7, List(joey, daveJnr, daveJnr), List(), LocalDate.parse("2020-09-06"))
 
   val matchAgainstWellyKB: Team = Team(List(chad, ben, dave, adam, rhys, aaron, kyle, joey, daveJnr, callum).sortBy(_.name.lastName))
-  val result8: Result = Result(8, matchAgainstWellyKB, "Wellington KB", 5, 6, List(daveJnr, daveJnr, callum, callum), List(), LocalDate.parse("2020-09-13"))
+  val result8: Result = Result(8, matchAgainstWellyKB, "Wellington KB", 5, 6, List(daveJnr, daveJnr, callum, callum), List(callum, joey, daveJones, dave, joey, chad), LocalDate.parse("2020-09-13"))
 
   val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7, result8).reverse
 

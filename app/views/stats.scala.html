@@ -1,6 +1,6 @@
 @import models.Result
 
-@(topGoalscorer: GoalsPerScorer, goalScorers: List[GoalsPerScorer])
+@(goalScorers: Seq[playerStats], assistsPeople: Seq[playerStats])
 
 @main("Result") {
     <div class="topnav">
@@ -11,18 +11,32 @@
       <a class="active" href="@routes.StatsController.index()">Stats</a>
     </div>
     <main>
-    <h1>Stats Page</h1>
+        <h1>Stats Page</h1>
+        <section>
+            <h2>Top Goals</h2>
+            <a href="@routes.ProfileController.index(goalScorers.head.player.index)">@goalScorers.head.player.name.firstName @goalScorers.head.player.name.lastName: @goalScorers.head.goals</a>
+            </br>
+            <img src="@routes.Assets.versioned(s"images/${goalScorers.head.player.name.firstName} ${goalScorers.head.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
+            </br>
 
-    <h2>Top Goalscorer</h2>
-    <a href="@routes.ProfileController.index(topGoalscorer.player.index)">@topGoalscorer.player.name.firstName @topGoalscorer.player.name.lastName: @topGoalscorer.goals</a>
-    </br>
-    <img src="@routes.Assets.versioned(s"images/${topGoalscorer.player.name.firstName} ${topGoalscorer.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
-    </br>
+            <h2>Other Goals</h2>
+            @for(player <- goalScorers.tail) {
+            <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.goals</a>
+            </br>
+            }
+        </section>
+        <section>
+            <h2>Top Assists</h2>
+            <a href="@routes.ProfileController.index(assistsPeople.head.player.index)">@assistsPeople.head.player.name.firstName @assistsPeople.head.player.name.lastName: @assistsPeople.head.assists</a>
+            </br>
+            <img src="@routes.Assets.versioned(s"images/${assistsPeople.head.player.name.firstName} ${assistsPeople.head.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
+            </br>
 
-    <h2>Other Goalscorers</h2>
-    @for(player <- goalScorers) {
-    <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.goals</a>
-    </br>
-    }
+            <h2>Other Assists</h2>
+            @for(player <- assistsPeople.tail) {
+            <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.assists</a>
+            </br>
+            }
+        </section>
     </main>
 }

@@ -85,3 +85,9 @@ div.max-width {
 main {
   padding: 0.5rem;
 }
+
+section {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3rem;
+}
