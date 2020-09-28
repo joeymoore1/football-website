@@ -36,16 +36,21 @@ object Constants {
 //  Other players were aarons mate kieran and cav
   val shifnalImperialsResult: Result = Result(1, matchAgainstShifnalImperials, "Shifnal Imperials", 2, 3, List(joey), List(daveJones, chad), LocalDate.parse("2020-09-20"))
 
-  val fullResults: List[Result] = List(shifnalImperialsResult).reverse
+  val matchAgainstKingsArms: Team = Team(List(chad, adam, layton, adRowley, matt, jack, joey, rhys, callum, mark).sortBy(_.name.lastName))
+  //  Other players were cav and jord dodd
+  val kingsArmsResult: Result = Result(2, matchAgainstKingsArms, "Kings Arms Market Drayton", 3, 6, List(joey, callum, adam), List(rhys, jack), LocalDate.parse("2020-09-27"))
+
+
+
+  val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult).reverse
 
 
 //  ******** FIXTURES *********
 
-  val kingsArms = Fixture("Kings Arms Market Drayton", LocalDate.parse("2020-09-27"), "Kings arms shithole ground")
   val captainsWebb = Fixture("Captain Webb", LocalDate.parse("2020-10-04"), "Bowring, Wellington")
   val wellingtonKB = Fixture("Wellington KB", LocalDate.parse("2020-10-18"), "Ketley Bank")
   val travellersJoy = Fixture("Travellers Joy", LocalDate.parse("2020-10-25"), "Ketley Bank")
 
-  val fullFixtures: List[Fixture] = List(kingsArms, captainsWebb, wellingtonKB, travellersJoy)
+  val fullFixtures: List[Fixture] = List(captainsWebb, wellingtonKB, travellersJoy)
 
 }
