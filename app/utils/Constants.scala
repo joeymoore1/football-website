@@ -26,18 +26,19 @@ object Constants {
   val adRowley: Player = Player(17, Name("Adam","Rowley"), "Defender")
   val daveJones: Player = Player(19, Name("Dave","Jones"), "Midfielder")
   val tom: Player = Player(20, Name("Tom","Quinn"), "Defender")
+  val cav: Player = Player(21, Name("Cav","Walker"), "Midfielder")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, aaron, joey,rhys, kyle, jack, ryan, adRowley, daveJones, tom).sortBy(_.name.lastName))
+    adam, callum, aaron, joey,rhys, kyle, jack, ryan, adRowley, daveJones, tom, cav).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
-  val matchAgainstShifnalImperials: Team = Team(List(chad, dave, ben, matt, adam, jack, daveJones, aaron, joey, callum, adRowley, tom).sortBy(_.name.lastName))
-//  Other players were aarons mate kieran and cav
+  val matchAgainstShifnalImperials: Team = Team(List(chad, dave, ben, matt, adam, jack, daveJones, aaron, cav, joey, callum, adRowley, tom).sortBy(_.name.lastName))
+//  Other players were aarons mate kieran
   val shifnalImperialsResult: Result = Result(1, matchAgainstShifnalImperials, "Shifnal Imperials", 2, 3, List(joey), List(daveJones, chad), LocalDate.parse("2020-09-20"))
 
-  val matchAgainstKingsArms: Team = Team(List(chad, adam, layton, adRowley, matt, jack, joey, rhys, callum, mark).sortBy(_.name.lastName))
-  //  Other players were cav and jord dodd
+  val matchAgainstKingsArms: Team = Team(List(chad, adam, ben, layton, adRowley, matt, jack, cav, joey, rhys, callum, mark).sortBy(_.name.lastName))
+  //  Other players were jord dodd
   val kingsArmsResult: Result = Result(2, matchAgainstKingsArms, "Kings Arms Market Drayton", 3, 6, List(joey, callum, adam), List(rhys, jack), LocalDate.parse("2020-09-27"))
 
 
