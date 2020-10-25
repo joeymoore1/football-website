@@ -43,19 +43,27 @@ object Constants {
   val kingsArmsResult: Result = Result(2, matchAgainstKingsArms, "Kings Arms Market Drayton", 3, 6, List(joey, callum, adam), List(rhys, jack), LocalDate.parse("2020-09-27"))
 
   val matchAgainstCaptainWebb: Team = Team(List(chad, adam, ben, layton, mark, rhys, kyle, cav, joey, callum, adRowley, dave, dan, jordan).sortBy(_.name.lastName))
-  //  Other players were cavs RB mate
+  //  Other players were luke
   val captainWebbResult: Result = Result(3, matchAgainstCaptainWebb, "Captain Webb FC", 2, 3, List(callum, callum), List(kyle), LocalDate.parse("2020-10-04"))
 
   val matchAgainstWellingtonKB: Team = Team(List(chad, layton, tom, ben, mark, matt, jack, dan, joey, rhys, adam, cav, jordan).sortBy(_.name.lastName))
   val wellingtonKBResult: Result = Result(4, matchAgainstWellingtonKB, "Wellington KB", 0, 7, List(), List(), LocalDate.parse("2020-10-18"))
 
-  val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult).reverse
+  val matchAgainstTravellersJoy: Team = Team(List(chad, mark, ben, layton, dave, matt, rhys, kyle, cav, callum, joey, jack, jordan).sortBy(_.name.lastName))
+  //  Other players were luke
+  val travellersJoyResult: Result = Result(5, matchAgainstTravellersJoy, "Travellers Joy", 7, 2, List(joey, joey, joey, callum, cav, kyle, dave), List(joey, dave, callum, rhys, kyle, kyle, callum), LocalDate.parse("2020-10-25"))
+
+  val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult, travellersJoyResult).reverse
 
 
 //  ******** FIXTURES *********
 
-  val travellersJoy = Fixture("Travellers Joy", LocalDate.parse("2020-10-25"), "Ketley Bank")
+  val lionFc = Fixture("The Lion FC", LocalDate.parse("2020-11-01"), "Ketley Bank")
+  val bullsHead = Fixture("Bulls Head Dawley Bank Vets", LocalDate.parse("2020-11-08"), "TBC")
+  val travellersJoy = Fixture("Travellers Joy FC", LocalDate.parse("2020-11-15"), "TBC")
+  val shifnalImps = Fixture("Shifnal Imperials FC", LocalDate.parse("2020-11-22"), "Idsall")
+  val bellBails = Fixture("Bell and Bails", LocalDate.parse("2020-11-29"), "HLC")
 
-  val fullFixtures: List[Fixture] = List(travellersJoy)
+  val fullFixtures: List[Fixture] = List(lionFc, bullsHead, travellersJoy, shifnalImps, bellBails)
 
 }
