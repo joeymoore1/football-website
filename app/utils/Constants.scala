@@ -54,7 +54,7 @@ object Constants {
   val travellersJoyResult: Result = Result(5, matchAgainstTravellersJoy, "Travellers Joy", 7, 2, List(joey, joey, joey, callum, cav, kyle, dave), List(joey, dave, callum, rhys, kyle, kyle, callum), LocalDate.parse("2020-10-25"))
 
   val matchAgainstTheLion: Team = Team(List(chad, mark, ben, layton, dave, dan, rhys, kyle, cav, callum, joey, adam).sortBy(_.name.lastName))
-  val theLionResult: Result = Result(6, matchAgainstTheLion, "The Lion FC", 3, 2, List(joey, callum, callum), List(kyle, kyle, dan), LocalDate.parse("2020-10-25"))
+  val theLionResult: Result = Result(6, matchAgainstTheLion, "The Lion FC", 3, 2, List(joey, callum, callum), List(kyle, kyle, dan), LocalDate.parse("2020-11-01"))
 
   val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult, travellersJoyResult, theLionResult).reverse
 
