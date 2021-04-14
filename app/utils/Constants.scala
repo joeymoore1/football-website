@@ -62,7 +62,7 @@ object Constants {
 
 //  ******** FIXTURES *********
 
-  val kingsArmsFixture: Fixture = Fixture("Kings Arms Market Drayton", LocalDate.parse("2020-04-18"), "Leegomery")
+  val kingsArmsFixture: Fixture = Fixture("Kings Arms Market Drayton", LocalDate.parse("2021-04-18"), "Leegomery")
 
   val fullFixtures: List[Fixture] = List(kingsArmsFixture)
 
