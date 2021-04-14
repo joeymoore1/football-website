@@ -55,13 +55,15 @@ object Constants {
   val secondShifnalResult: Result = Result(7, secondMatchAgainstShifnalImps, "Shifnal Imperials", 1, 6, List(rhys), List(joey), LocalDate.parse("2020-12-20"))
 
   val secondMatchAgainstTravellersJoy: Team = Team(List(chad, mark, ben, layton, matt, rhys, kyle, callum, joey, jack, dan, adNixon, adam).sortBy(_.name.lastName))
-  val secondTravellersJoyResult: Result = Result(5, secondMatchAgainstTravellersJoy, "Travellers Joy", 4, 3, List(joey, joey, rhys, kyle), List(joey, joey, dan, rhys), LocalDate.parse("2021-04-11"))
+  val secondTravellersJoyResult: Result = Result(8, secondMatchAgainstTravellersJoy, "Travellers Joy", 4, 3, List(joey, joey, rhys, kyle), List(joey, joey, dan, rhys), LocalDate.parse("2021-04-11"))
 
   val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult, travellersJoyResult, theLionResult, secondShifnalResult, secondTravellersJoyResult).reverse
 
 
 //  ******** FIXTURES *********
 
-  val fullFixtures: List[Fixture] = List()
+  val kingsArmsFixture: Fixture = Fixture("Kings Arms Market Drayton", LocalDate.parse("2020-04-18"), "Leegomery")
+
+  val fullFixtures: List[Fixture] = List(kingsArmsFixture)
 
 }
