@@ -22,13 +22,13 @@ object Constants {
   val callum: Player = Player(12, Name("Callum","Wilson"), "Striker")
   val kyle: Player = Player(13, Name("Kyle","Jordan"), "Midfielder")
   val jack: Player = Player(14, Name("Jack","Tarpey"), "Midfielder")
-  val ryan: Player = Player(16, Name("Ryan","Thompson"), "Defender")
-  val adNixon: Player = Player(17, Name("Adam","Nixon"), "Defender")
-  val daveJones: Player = Player(19, Name("Dave","Jones"), "Midfielder")
-  val dan: Player = Player(23, Name("Daniel","Smart"), "Midfielder")
+  val adNixon: Player = Player(15, Name("Adam","Nixon"), "Defender")
+  val daveJones: Player = Player(16, Name("Dave","Jones"), "Midfielder")
+  val dan: Player = Player(17, Name("Daniel","Smart"), "Midfielder")
+  val danSmout: Player = Player(18, Name("Dan","Smout"), "Defender")
 
   val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, aaron, joey,rhys, kyle, jack, ryan, adNixon, daveJones, dan).sortBy(_.name.lastName))
+    adam, callum, aaron, joey,rhys, kyle, jack, adNixon, daveJones, dan, danSmout).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
@@ -57,13 +57,15 @@ object Constants {
   val secondMatchAgainstTravellersJoy: Team = Team(List(chad, mark, ben, layton, matt, rhys, kyle, callum, joey, jack, dan, adNixon, adam).sortBy(_.name.lastName))
   val secondTravellersJoyResult: Result = Result(8, secondMatchAgainstTravellersJoy, "Travellers Joy", 4, 3, List(joey, joey, rhys, kyle), List(joey, joey, dan, rhys), LocalDate.parse("2021-04-11"))
 
-  val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult, travellersJoyResult, theLionResult, secondShifnalResult, secondTravellersJoyResult).reverse
+  val secondMatchAgainstKingsArms: Team = Team(List(chad, danSmout, adam, layton, adNixon, kyle, jack, matt, dan, joey, rhys).sortBy(_.name.lastName))
+  val secondKingsArmsResult: Result = Result(9, secondMatchAgainstKingsArms, "Kings Arms Market Drayton", 4, 1, List(joey, rhys, dan, jack), List(joey, rhys, dan, jack), LocalDate.parse("2021-04-18"))
+
+  val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult, travellersJoyResult,
+    theLionResult, secondShifnalResult, secondTravellersJoyResult, secondKingsArmsResult).reverse
 
 
 //  ******** FIXTURES *********
 
-  val kingsArmsFixture: Fixture = Fixture("Kings Arms Market Drayton", LocalDate.parse("2021-04-18"), "Leegomery")
-
-  val fullFixtures: List[Fixture] = List(kingsArmsFixture)
+  val fullFixtures: List[Fixture] = List()
 
 }
