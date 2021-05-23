@@ -68,18 +68,25 @@ object Constants {
   val secondMatchAgainstCapWebb: Team = Team(List(chad, mark, ben, layton, adam, matt, aaron, jack, rhys, ellis, joey, callum).sortBy(_.name.lastName))
   val secondCapWebbResult: Result = Result(11, secondMatchAgainstCapWebb, "Captain Webb FC", 1, 6, List(joey), List(jack), LocalDate.parse("2021-05-02"))
 
+  //  Other players were jez/ian/scott
+  val bellAndBails: Team = Team(List(chad, mark, adam, adNixon, dean, matt, rhys, callum, joey, danSmout).sortBy(_.name.lastName))
+  val bellAndBailsResult: Result = Result(12, bellAndBails, "Bell and Bails", 1, 3, List(rhys), List(callum), LocalDate.parse("2021-05-09"))
+
+  //  Other players were curtis/rich/scott
+  val bellAndBails2: Team = Team(List(mark, layton, danSmout, dan, matt, ben, joey, jack, ellis).sortBy(_.name.lastName))
+  val bellAndBailsResult2: Result = Result(13, bellAndBails2, "Bell and Bails", 4, 3, List(joey,joey), List(ben, joey, dan), LocalDate.parse("2021-05-16"))
+
+  //  Other players were curt/ryan/alex/kaleem/nath/grimbo/stu
+  val matchAgainstTheLion2: Team = Team(List(mark, layton, danSmout, matt, joey, ben, adam).sortBy(_.name.lastName))
+  val theLionResult2: Result = Result(14, matchAgainstTheLion2, "The Lion FC", 1, 3, List(joey), List(), LocalDate.parse("2021-05-23"))
 
   val fullResults: List[Result] = List(shifnalImperialsResult, kingsArmsResult, captainWebbResult, wellingtonKBResult, travellersJoyResult,
-    theLionResult, secondShifnalResult, secondTravellersJoyResult, secondKingsArmsResult, secondWellingtonKBResult, secondCapWebbResult).reverse
+    theLionResult, secondShifnalResult, secondTravellersJoyResult, secondKingsArmsResult, secondWellingtonKBResult, secondCapWebbResult, bellAndBailsResult,
+    bellAndBailsResult2, theLionResult2).reverse
 
 
 //  ******** FIXTURES *********
 
-  val bellAndBailsFixture: Fixture = Fixture("Bell and Bails", LocalDate.parse("2021-05-09"), "Hadley Learning Centre")
-  val secondBellAndBailsFixture: Fixture = Fixture("Bell and Bails", LocalDate.parse("2021-05-16"), "Ketley Bank")
-  val secondLionFixture: Fixture = Fixture("The Lion FC", LocalDate.parse("2021-05-23"), "Ketley Bank")
-
-
-  val fullFixtures: List[Fixture] = List(bellAndBailsFixture, secondBellAndBailsFixture, secondLionFixture)
+  val fullFixtures: List[Fixture] = List()
 
 }
