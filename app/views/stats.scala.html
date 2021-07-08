@@ -13,6 +13,7 @@
     <main>
         <h1>Stats Page</h1>
         <section>
+            @if(goalScorers.size >= 1){
             <h2>Top Goals</h2>
             <a href="@routes.ProfileController.index(goalScorers.head.player.index)">@goalScorers.head.player.name.firstName @goalScorers.head.player.name.lastName: @goalScorers.head.goals</a>
             </br>
@@ -24,8 +25,13 @@
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.goals</a>
             </br>
             }
+            }
+            @if(goalScorers.size < 1){
+            <h2>No goals yet</h2>
+            }
         </section>
         <section>
+            @if(assistsPeople.size >= 1){
             <h2>Top Assists</h2>
             <a href="@routes.ProfileController.index(assistsPeople.head.player.index)">@assistsPeople.head.player.name.firstName @assistsPeople.head.player.name.lastName: @assistsPeople.head.assists</a>
             </br>
@@ -36,6 +42,10 @@
             @for(player <- assistsPeople.tail) {
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.assists</a>
             </br>
+            }
+            }
+            @if(assistsPeople.size < 1){
+            <h2>No assists yet</h2>
             }
         </section>
     </main>
