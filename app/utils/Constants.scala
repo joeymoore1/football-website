@@ -38,7 +38,7 @@ object Constants {
 
   //Other players were Luke hester
   val impactTeam:Team = Team(List(chad, danGrimbo, layton, adNixon, rich, mattMaiden, jack, danSmart, joey, cameron, mattSmart, charlie, kaleem, danSmout, kieran))
-  val impactResult: Result = Result(1, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 2, goalsAgainst = 1, scorers = List(joey, kaleem), assists = List(kaleem, mattMaiden), date = LocalDate.of(2021, 7, 29))
+  val impactResult: Result = Result(2, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 2, goalsAgainst = 1, scorers = List(joey, kaleem), assists = List(kaleem, mattMaiden), date = LocalDate.of(2021, 7, 29))
 
   val fullResults: List[Result] = List(tf3Result, impactResult).reverse
 
