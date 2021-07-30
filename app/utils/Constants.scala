@@ -24,27 +24,26 @@ object Constants {
   val danGrimbo: Player = Player(14, Name("Dan","Griffiths"), "Defender")
   val charlie: Player = Player(15, Name("Charlie","Bates"), "Defender")
   val rich: Player = Player(16, Name("Rich","Boden"), "Defender")
-  val tony: Player = Player(17, Name("Tony","Wilkes"), "Midfielder")
-  val kian: Player = Player(18, Name("Kian","Garbett"), "Midfielder")
-  val kieran: Player = Player(19, Name("Kieran","Jakovic"), "Defender")
-  val cameron: Player = Player(20, Name("Cameron","Rann"), "Midfielder")
+  val kieran: Player = Player(17, Name("Kieran","Jakovic"), "Defender")
+  val cameron: Player = Player(18, Name("Cameron","Rann"), "Midfielder")
 
   val fullTeam: Team = Team(List(joey, chad, mattMaiden, adFox, layton, dean, jack, adNixon, danSmout, danSmart,
-    mattSmart, kaleem, josh, danGrimbo, charlie, rich, tony, kian, kieran, cameron).sortBy(_.name.lastName))
+    mattSmart, kaleem, josh, danGrimbo, charlie, rich, kieran, cameron).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
-  //Other players were shit Kian and Nathan
-  val tf3Team:Team = Team(List(chad, danSmout, adNixon, adFox, jack, joey, mattMaiden, danSmart, mattSmart, cameron, kian, kieran, layton))
-  val tf3Result: Result = Result(1, homeTeam = tf3Team, awayTeam = "TF3 FC", goalsFor = 2, goalsAgainst = 4, scorers = List(cameron, mattSmart), assists = List(kian, cameron), date = LocalDate.of(2021, 7, 11))
+  //Other players were shit Kian and Nathan (good kian assisted but has left the team)
+  val tf3Team:Team = Team(List(chad, danSmout, adNixon, adFox, jack, joey, mattMaiden, danSmart, mattSmart, cameron, kieran, layton))
+  val tf3Result: Result = Result(1, homeTeam = tf3Team, awayTeam = "TF3 FC", goalsFor = 2, goalsAgainst = 4, scorers = List(cameron, mattSmart), assists = List(cameron), date = LocalDate.of(2021, 7, 11))
 
+  //Other players were Luke hester
+  val impactTeam:Team = Team(List(chad, danGrimbo, layton, adNixon, rich, mattMaiden, jack, danSmart, joey, cameron, mattSmart, charlie, kaleem, danSmout, kieran))
+  val impactResult: Result = Result(1, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 2, goalsAgainst = 1, scorers = List(joey, kaleem), assists = List(kaleem, mattMaiden), date = LocalDate.of(2021, 7, 29))
 
-  val fullResults: List[Result] = List(tf3Result).reverse
+  val fullResults: List[Result] = List(tf3Result, impactResult).reverse
 
 //  ******** FIXTURES *********
 
-  val railwayFriendly: Fixture = Fixture("Railway United", LocalDate.of(2021, 7, 18), "Ketley Bank", "friendly")
-
-  val fullFixtures: List[Fixture] = List(railwayFriendly)
+  val fullFixtures: List[Fixture] = List()
 
 }
