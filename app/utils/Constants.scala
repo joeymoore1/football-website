@@ -40,10 +40,20 @@ object Constants {
   val impactTeam:Team = Team(List(chad, danGrimbo, layton, adNixon, rich, mattMaiden, jack, danSmart, joey, cameron, mattSmart, charlie, kaleem, danSmout, kieran))
   val impactResult: Result = Result(2, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 2, goalsAgainst = 1, scorers = List(joey, kaleem), assists = List(kaleem, mattMaiden), date = LocalDate.of(2021, 7, 29))
 
-  val fullResults: List[Result] = List(tf3Result, impactResult).reverse
+  //Other players were Lewis
+  val dawleyTeam:Team = Team(List(chad, layton, danGrimbo, adNixon, mattMaiden, cameron, mattSmart, joey, kaleem, jack, adFox, charlie, danSmout, danSmart))
+  val dawleyResult: Result = Result(3, homeTeam = dawleyTeam, awayTeam = "Dawley Reserves", goalsFor = 3, goalsAgainst = 1, scorers = List(joey, joey, mattSmart), assists = List(adNixon), date = LocalDate.of(2021, 8, 11))
+
+  val fullResults: List[Result] = List(tf3Result, impactResult, dawleyResult).reverse
 
 //  ******** FIXTURES *********
 
-  val fullFixtures: List[Fixture] = List()
+  val phezFixture: Fixture = Fixture("AFC Phez", LocalDate.of(2021, 8, 15), "Hinstock", "pre-season")
+  val sportsFixture: Fixture = Fixture("Sports Village", LocalDate.of(2021, 8, 16), "Shrewsbury Sports Village", "pre-season")
+  val charityFixture: Fixture = Fixture("Turf FC Vets", LocalDate.of(2021, 8, 21), "Oakengates Leisure Center", "grudge match")
+  val apleyFixture: Fixture = Fixture("Apley FC", LocalDate.of(2021, 8, 22), "Unknown", "pre-season")
+  val impactFixture: Fixture = Fixture("Impact FC", LocalDate.of(2021, 8, 29), "Unknown", "pre-season")
+
+  val fullFixtures: List[Fixture] = List(phezFixture, sportsFixture, charityFixture, apleyFixture, impactFixture)
 
 }
