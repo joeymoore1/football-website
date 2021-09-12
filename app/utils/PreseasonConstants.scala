@@ -10,58 +10,53 @@ object PreseasonConstants {
 
   val joey: Player = Player(1, Name("Joey","Moore"), "Striker")
   val chad: Player = Player(2, Name("Chad","Bailey"), "Keeper")
-  val matt: Player = Player(3, Name("Matt","Maiden"), "Defender")
-  val ben: Player = Player(4, Name("Ben","Keable"), "Defender")
-  val rhys: Player = Player(5, Name("Rhys","Clarkson"), "Striker")
-  val adam: Player = Player(6, Name("Adam","Fox"), "Midfielder")
-  val dave: Player = Player(7, Name("David","Boden"), "Defender")
-  val mark: Player = Player(8, Name("Mark","Betteridge"), "Defender")
-  val aaron: Player = Player(9, Name("Arran","Moore"), "Midfielder")
-  val layton: Player = Player(10, Name("Layton","Reynolds"), "Defender")
-  val dean: Player = Player(11, Name("Dean","Ridley"), "Defender")
-  val callum: Player = Player(12, Name("Callum","Wilson"), "Striker")
-  val kyle: Player = Player(13, Name("Kyle","Jordan"), "Midfielder")
-  val jack: Player = Player(14, Name("Jack","Tarpey"), "Midfielder")
-  val daveJnr: Player = Player(15, Name("David","Easthope"), "Striker")
-  val ryan: Player = Player(16, Name("Ryan","Thompson"), "Defender")
-  val adRowley: Player = Player(17, Name("Adam","Rowley"), "Defender")
-  val chambo: Player = Player(18, Name("Adam","Chamberlain"), "Midfielder")
-  val daveJones: Player = Player(19, Name("Dave","Jones"), "Midfielder")
+  val mattMaiden: Player = Player(3, Name("Matt","Maiden"), "Defender")
+  val adFox: Player = Player(4, Name("Adam","Fox"), "Midfielder")
+  val layton: Player = Player(5, Name("Layton","Reynolds"), "Defender")
+  val dean: Player = Player(6, Name("Dean","Ridley"), "Defender")
+  val jack: Player = Player(7, Name("Jack","Tarpey"), "Midfielder")
+  val adNixon: Player = Player(8, Name("Adam","Nixon"), "Defender")
+  val danSmart: Player = Player(9, Name("Daniel","Smart"), "Midfielder")
+  val danSmout: Player = Player(10, Name("Dan","Smout"), "Defender")
+  val mattSmart: Player = Player(11, Name("Matt","Smart"), "Midfielder")
+  val kaleem: Player = Player(12, Name("Kaleem","Ramzan"), "Striker")
+  val luke: Player = Player(13, Name("Luke","Hester"), "Striker")
+  val danGrimbo: Player = Player(14, Name("Dan","Griffiths"), "Defender")
+  val charlie: Player = Player(15, Name("Charlie","Bates"), "Defender")
+  val rich: Player = Player(16, Name("Rich","Boden"), "Defender")
+  val kieran: Player = Player(17, Name("Kieran","Jakovic"), "Defender")
+  val cameron: Player = Player(18, Name("Cameron","Rann"), "Midfielder")
+  val lewis: Player = Player(19, Name("Lewis","Evans"), "Defender")
+  val lukeNixon: Player = Player(20, Name("Luke","Nixon"), "Defender")
 
-  val fullTeam: Team = Team(List(chad, matt, ben, dave, mark, layton, dean,
-    adam, callum, aaron, joey,rhys, kyle, jack, daveJnr, ryan, chambo, adRowley, daveJones).sortBy(_.name.lastName))
+  val fullTeam: Team = Team(List(joey, chad, mattMaiden, adFox, layton, dean, jack, adNixon, danSmout, danSmart,
+    mattSmart, kaleem, danGrimbo, charlie, rich, kieran, cameron, luke, lewis, lukeNixon).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
-  val matchAgainstWellingtonKB: Team = Team(List(chad, dean, matt, rhys, dave, callum, jack, adam, mark, ben, layton, daveJnr, ryan).sortBy(_.name.lastName))
-  val result1: Result = Result(1, matchAgainstWellingtonKB, "Wellington KB", 4, 3, List(daveJnr, daveJnr, callum, daveJnr), List(), LocalDate.parse("2020-07-26"))
+  //Other players were shit Kian and Nathan (good kian assisted but has left the team)
+  val tf3Team:Team = Team(List(chad, danSmout, adNixon, adFox, jack, joey, mattMaiden, danSmart, mattSmart, cameron, kieran, layton))
+  val tf3Result: Result = Result(1, homeTeam = tf3Team, awayTeam = "TF3 FC", goalsFor = 2, goalsAgainst = 4, scorers = List(cameron, mattSmart), assists = List(cameron), date = LocalDate.of(2021, 7, 11))
 
-  val matchAgainstCrownFC: Team = Team(List(chad, dave, layton, matt, ben, mark, jack, kyle, adam, rhys, callum, ryan, dean).sortBy(_.name.lastName))
-  val result2: Result = Result(2, matchAgainstCrownFC, "Crown FC", 2, 1, List(callum, jack), List(), LocalDate.parse("2020-07-29"))
+  val impactTeam:Team = Team(List(chad, danGrimbo, layton, adNixon, rich, mattMaiden, jack, danSmart, joey, cameron, mattSmart, charlie, kaleem, danSmout, kieran, luke))
+  val impactResult: Result = Result(2, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 2, goalsAgainst = 1, scorers = List(joey, kaleem), assists = List(kaleem, mattMaiden), date = LocalDate.of(2021, 7, 29))
 
-  val matchAgainstNCUnited: Team = Team(List(kyle, jack, callum, rhys, matt, dean, daveJnr, dave, mark, ben, layton, adRowley).sortBy(_.name.lastName))
-  val result3: Result = Result(3, matchAgainstNCUnited, "NC United", 5, 3, List(rhys, callum, matt, callum, daveJnr), List(), LocalDate.parse("2020-08-05"))
+  val dawleyTeam:Team = Team(List(chad, layton, danGrimbo, adNixon, mattMaiden, cameron, mattSmart, joey, kaleem, jack, adFox, charlie, danSmout, danSmart, lewis))
+  val dawleyResult: Result = Result(3, homeTeam = dawleyTeam, awayTeam = "Dawley Reserves", goalsFor = 3, goalsAgainst = 1, scorers = List(joey, joey, mattSmart), assists = List(adNixon), date = LocalDate.of(2021, 8, 11))
 
-  val matchAgainstAFCDub: Team = Team(List(joey, callum, jack, rhys, dean, matt, chad, ryan, layton, adam, dave, daveJnr, kyle, chambo).sortBy(_.name.lastName))
-  val result4: Result = Result(4, matchAgainstAFCDub, "AFC Dub", 2, 3, List(joey, callum), List(), LocalDate.parse("2020-08-16"))
+  val phezTeam:Team = Team(List(chad, layton, danGrimbo, adNixon, mattMaiden, mattSmart, joey, kaleem, charlie, danSmout, kieran, lewis, luke))
+  val phezResult: Result = Result(4, homeTeam = phezTeam, awayTeam = "AFC Phez", goalsFor = 3, goalsAgainst = 4, scorers = List(kaleem, kaleem, kaleem), assists = List(joey), date = LocalDate.of(2021, 8, 15))
 
-  val matchAgainstBritannia: Team = Team(List(joey, dean, daveJnr, dave, rhys, layton, matt, ben, mark, jack, adam, chambo, adRowley).sortBy(_.name.lastName))
-  val result5: Result = Result(5, matchAgainstBritannia, "Britannia FC", 1, 8, List(joey), List(), LocalDate.parse("2020-08-23"))
+  val sportsTeam:Team = Team(List(chad, joey, cameron, kaleem, mattSmart, adNixon, mattMaiden, danSmout, charlie, layton, danSmart, lewis, luke))
+  val sportsResult: Result = Result(5, homeTeam = sportsTeam, awayTeam = "Sports Village FC", goalsFor = 2, goalsAgainst = 4, scorers = List(kaleem, kaleem), assists = List(cameron, adNixon), date = LocalDate.of(2021, 8, 16))
 
-  val matchAgainstImpact: Team = Team(List(joey, daveJnr, dave, rhys, layton, matt, ben, mark, jack, kyle, callum, adRowley, chad).sortBy(_.name.lastName))
-  val result6: Result = Result(6, matchAgainstImpact, "Impact FC", 7, 2, List(joey, callum, callum, callum, rhys, kyle, daveJnr), List(), LocalDate.parse("2020-08-30"))
+  val fullResults: List[Result] = List(tf3Result, impactResult, dawleyResult, phezResult, sportsResult).reverse
 
-  val matchAgainstTSS: Team = Team(List(chad, mark, ben, layton, dave, matt, jack, rhys, daveJnr, kyle, joey, adRowley, adam).sortBy(_.name.lastName))
-  val result7: Result = Result(7, matchAgainstTSS, "TSS", 3, 7, List(joey, daveJnr, daveJnr), List(), LocalDate.parse("2020-09-06"))
+  //  ******** FIXTURES *********
 
-  val matchAgainstWellyKB: Team = Team(List(chad, ben, dave, adam, rhys, aaron, kyle, joey, daveJnr, callum).sortBy(_.name.lastName))
-  val result8: Result = Result(8, matchAgainstWellyKB, "Wellington KB", 5, 6, List(daveJnr, daveJnr, callum, callum), List(callum, joey, daveJones, dave, joey, chad), LocalDate.parse("2020-09-13"))
+  val phezFixture: Fixture = Fixture(opponent = "AFC Phez", date = LocalDate.of(2021, 9, 12), venue = "Hinstock", gameType = "league")
+  val impactFixture: Fixture = Fixture(opponent = "Impact FC", date = LocalDate.of(2021, 9, 19), venue = "Ketley Bank", gameType = "league")
 
-  val fullResults: List[Result] = List(result1, result2, result3, result4, result5, result6, result7, result8).reverse
-
-
-//  ******** FIXTURES *********
-
-  val fullFixtures: List[Fixture] = List()
+  val fullFixtures: List[Fixture] = List(phezFixture, impactFixture)
 
 }
