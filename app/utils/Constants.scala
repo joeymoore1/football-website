@@ -36,12 +36,17 @@ object Constants {
   val phezTeam:Team = Team(List(kieran, jack, adNixon, danGrimbo, lukeNixon, layton, mattMaiden, cameron, joey, kaleem, mattSmart, danSmout, charlie, luke))
   val phezResult: Result = Result(1, homeTeam = phezTeam, awayTeam = "AFC Phez", goalsFor = 5, goalsAgainst = 2, scorers = List(joey, kaleem, cameron, cameron, adNixon), assists = List(kaleem, kaleem, luke, jack, charlie), date = LocalDate.of(2021, 9, 12))
 
-  val fullResults: List[Result] = List(phezResult).reverse
+  val impactTeam:Team = Team(List(chad, jack, danGrimbo, adNixon, lukeNixon, layton, mattMaiden, cameron, mattSmart, kaleem, joey, kieran, adFox, charlie))
+  val impactResult: Result = Result(2, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 1, goalsAgainst = 4, scorers = List(adFox), assists = List(cameron), date = LocalDate.of(2021, 9, 19))
+
+  val fullResults: List[Result] = List(phezResult, impactResult).reverse
 
 //  ******** FIXTURES *********
 
-  val impactFixture: Fixture = Fixture(opponent = "Impact FC", date = LocalDate.of(2021, 9, 19), venue = "Ketley Bank", gameType = "league")
+  val bullFixture: Fixture = Fixture(opponent = "BULL IN THE BARNE UNITED F.C.", date = LocalDate.of(2021, 9, 26), venue = "Ketley Bank", gameType = "cup")
+  val poloniaFixture: Fixture = Fixture(opponent = "Polonia Telford FC", date = LocalDate.of(2021, 10, 3), venue = "Mercia Fields", gameType = "league")
+  val queensFixture: Fixture = Fixture(opponent = "FC Queens", date = LocalDate.of(2021, 10, 17), venue = "Bowring Park", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(impactFixture)
+  val fullFixtures: List[Fixture] = List(bullFixture, poloniaFixture, queensFixture)
 
 }

@@ -24,7 +24,7 @@
     @for(month <- months) {
     <h2>@month</h2>
     @for(fixture <- filterResults(month)){
-    <a class="fixture">@formatDate(fixture.date) :</a><b class="fixture">@fixture.opponent</b><a class="fixture">at @fixture.venue in a @fixture.gameType match.</a>
+    <a class="fixture">@formatDate(fixture.date) : <b class="fixture">@fixture.opponent</b>at @fixture.venue in a @fixture.gameType match.</a>
     </br>
     }
         }
