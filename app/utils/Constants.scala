@@ -43,7 +43,7 @@ object Constants {
   val bullResult: Result = Result(3, homeTeam = bullTeam, awayTeam = "Bull in the barne FC", goalsFor = 3, goalsAgainst = 4, scorers = List(adNixon, jack, mattSmart), assists = List(mattSmart, adNixon), date = LocalDate.of(2021, 9, 26))
 
   val poloniaTeam:Team = Team(List(chad, lukeNixon, layton, danGrimbo, adFox, danSmart, mattMaiden, adNixon, jack, joey, mattSmart, danSmout, lewis, kieran))
-  val poloniaResult: Result = Result(4, homeTeam = poloniaTeam, awayTeam = "Polonia Telford FC", goalsFor = 0, goalsAgainst = 7, scorers = List(), assists = List(), date = LocalDate.of(2021, 10, 3))
+  val poloniaResult: Result = Result(4, homeTeam = poloniaTeam, awayTeam = "Polonia Telford FC", goalsFor = 0, goalsAgainst = 6, scorers = List(), assists = List(), date = LocalDate.of(2021, 10, 3))
 
   val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult).reverse
 
