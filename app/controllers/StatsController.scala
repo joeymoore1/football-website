@@ -12,7 +12,7 @@ class StatsController @Inject()(val controllerComponents: ControllerComponents,
 
   def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
 
-    val goalScorerList = playerStatsList(fullTeam.players).filter(_.goals > 0).sortBy(x => (-x.goals, x.player.name.lastName))
+    val goalScorerList = playerStatsList(fullTeam.players).filter(_.goals > 0).sortBy(x => (-x.goals, x.player.name.lastName.reverse))
 
     val assistsList = playerStatsList(fullTeam.players).filter(_.assists > 0).sortBy(x => (-x.assists, x.player.name.lastName))
 
