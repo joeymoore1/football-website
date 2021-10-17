@@ -45,12 +45,15 @@ object Constants {
   val poloniaTeam:Team = Team(List(chad, lukeNixon, layton, danGrimbo, adFox, danSmart, mattMaiden, adNixon, jack, joey, mattSmart, danSmout, lewis, kieran))
   val poloniaResult: Result = Result(4, homeTeam = poloniaTeam, awayTeam = "Polonia Telford FC", goalsFor = 0, goalsAgainst = 6, scorers = List(), assists = List(), date = LocalDate.of(2021, 10, 3))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult).reverse
+  val queensTeam:Team = Team(List(chad, kieran, danSmout, adFox, charlie, danSmart, luke, jack, mattSmart, mattMaiden, lewis, layton, danGrimbo))
+  val queensResult: Result = Result(5, homeTeam = queensTeam, awayTeam = "FC Queens", goalsFor = 3, goalsAgainst = 1, scorers = List(jack, mattSmart, danSmout), assists = List(jack, mattSmart), date = LocalDate.of(2021, 10, 17))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult).reverse
 
 //  ******** FIXTURES *********
 
-  val queensFixture: Fixture = Fixture(opponent = "FC Queens", date = LocalDate.of(2021, 10, 17), venue = "Bowring Park", gameType = "league")
+  val travellorsFixture: Fixture = Fixture(opponent = "Travellers Joy", date = LocalDate.of(2021, 10, 24), venue = "Sutton Hill", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(queensFixture)
+  val fullFixtures: List[Fixture] = List(travellorsFixture)
 
 }
