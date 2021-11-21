@@ -59,8 +59,7 @@ object Constants {
   val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result).reverse
 
 //  ******** FIXTURES *********
-
-
+  
   val fullFixtures: List[Fixture] = List()
 
 }
