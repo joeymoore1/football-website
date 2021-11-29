@@ -56,10 +56,17 @@ object Constants {
   val impact2Team:Team = Team(List(chad, adNixon, lukeNixon, adFox, danSmout, charlie, joey, mattMaiden, kaleem, jack, callum, kieranW, lewis, danGrimbo))
   val impact2Result: Result = Result(7, homeTeam = impact2Team, awayTeam = "Impact FC", goalsFor = 6, goalsAgainst = 2, scorers = List(joey, kaleem, jack, callum, danGrimbo, adNixon), assists = List(kaleem, kaleem, kaleem, joey, joey), date = LocalDate.of(2021, 11, 21))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result).reverse
+  val apleyTeam:Team = Team(List(chad, lukeNixon, adFox, danGrimbo, layton, mattMaiden, jack, danSmout, danSmart, adNixon, joey, charlie, luke, kieran))
+  val apleyResult: Result = Result(8, homeTeam = apleyTeam, awayTeam = "Apley United FC", goalsFor = 3, goalsAgainst = 5, scorers = List(joey, adNixon, mattMaiden), assists = List(joey, joey), date = LocalDate.of(2021, 11, 28))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult).reverse
 
 //  ******** FIXTURES *********
   
-  val fullFixtures: List[Fixture] = List()
+  val wrekinFixture: Fixture = Fixture(opponent = "AFC Wrekin", date = LocalDate.of(2021, 12, 5), venue = "Ketley Bank", gameType = "league")
+  val phezFixture: Fixture = Fixture(opponent = "AFC Phez Newport", date = LocalDate.of(2021, 12, 12), venue = "Ketley Bank", gameType = "league")
+  val poloniaFixture: Fixture = Fixture(opponent = "Polonia Telford FC", date = LocalDate.of(2021, 12, 19), venue = "Ketley Bank", gameType = "league")
+
+  val fullFixtures: List[Fixture] = List(wrekinFixture, phezFixture, poloniaFixture)
 
 }
