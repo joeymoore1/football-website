@@ -14,7 +14,6 @@ class ProfileService @Inject()() {
   def getAppearances(player: Player): Int = {
     val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
     filterResultsByPlayer.size
-//    fullResults.count(_.homeTeam.players.contains(player))
   }
 
   def getGoalsForPlayer(player: Player): Int = {
@@ -31,5 +30,21 @@ class ProfileService @Inject()() {
       assists += result.assists.count(_ == player)
     }
     assists
+  }
+
+  def getWinsForPlayer(player: Player): String = {
+    val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
+    var wins = 0
+    for (result <- filterResultsByPlayer){
+      val goalsFor = result.goalsFor
+      val goalsAgainst = result.goalsAgainst
+      val won = goalsFor > goalsAgainst
+      if(won) wins += 1
+    }
+    val appearances = getAppearances(player)
+    val percentage: Double  = wins.toFloat / appearances
+    val string = f"Win percentage: ${percentage*100}%.0f%%"
+
+    string
   }
 }
