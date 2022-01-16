@@ -70,11 +70,16 @@ object Constants {
   val bellBailsTeam:Team = Team(List(lukeNixon, danSmout, layton, danSmart, lewis, mattMaiden, adNixon, joey, kaleem, callum, jack, charlie, luke, mattSmart, danGrimbo))
   val bellBailsResult: Result = Result(11, homeTeam = bellBailsTeam, awayTeam = "Bell & Bails FC", goalsFor = 5, goalsAgainst = 2, scorers = List(joey, joey, kaleem, kaleem, jack), assists = List(adNixon, adNixon, joey, kaleem), date = LocalDate.of(2022, 1, 9))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult).reverse
+  //Other player was chris
+  val travsTeam2:Team = Team(List(chad, danSmout, layton, lukeNixon, mattMaiden, jack, adNixon, cameron, mattSmart, callum, joey, adFox, danGrimbo))
+  val travsResult2: Result = Result(12, homeTeam = travsTeam2, awayTeam = "Travellers Joy", goalsFor = 3, goalsAgainst = 0, scorers = List(joey, joey, adNixon), assists = List(joey, danSmout, adFox), date = LocalDate.of(2022, 1, 16))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2).reverse
 
 //  ******** FIXTURES *********
-  
 
-  val fullFixtures: List[Fixture] = List()
+  val madeleyFixture: Fixture = Fixture("Madeley CC FC", LocalDate.of(2022, 1, 30), "Sutton hill playing field", "league")
+
+  val fullFixtures: List[Fixture] = List(madeleyFixture)
 
 }
