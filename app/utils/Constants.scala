@@ -70,11 +70,13 @@ object Constants {
   val bellBailsTeam:Team = Team(List(lukeNixon, danSmout, layton, danSmart, lewis, mattMaiden, adNixon, joey, kaleem, callum, jack, charlie, luke, mattSmart, danGrimbo))
   val bellBailsResult: Result = Result(11, homeTeam = bellBailsTeam, awayTeam = "Bell & Bails FC", goalsFor = 5, goalsAgainst = 2, scorers = List(joey, joey, kaleem, kaleem, jack), assists = List(adNixon, adNixon, joey, kaleem), date = LocalDate.of(2022, 1, 9))
 
-  //Other player was chris
   val travsTeam2:Team = Team(List(chad, danSmout, layton, lukeNixon, mattMaiden, jack, adNixon, cameron, mattSmart, callum, joey, adFox, danGrimbo))
   val travsResult2: Result = Result(12, homeTeam = travsTeam2, awayTeam = "Travellers Joy", goalsFor = 3, goalsAgainst = 0, scorers = List(joey, joey, adNixon), assists = List(joey, danSmout, adFox), date = LocalDate.of(2022, 1, 16))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2).reverse
+  val wrekinTeam2:Team = Team(List(chad, danSmout, adNixon, layton, mattMaiden, danSmart, jack, cameron, charlie, mattSmart, kaleem, rich, danGrimbo, callum))
+  val wrekinResult2: Result = Result(13, homeTeam = wrekinTeam2, awayTeam = "AFC Wrekin", goalsFor = 4, goalsAgainst = 3, scorers = List(kaleem, jack, adNixon, danGrimbo), assists = List(danSmart, danSmart, adNixon), date = LocalDate.of(2022, 1, 23))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2).reverse
 
 //  ******** FIXTURES *********
 
