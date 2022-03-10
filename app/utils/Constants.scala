@@ -79,13 +79,18 @@ object Constants {
   val madeleyTeam:Team = Team(List(chad, luke, lukeNixon, layton, mattMaiden, danGrimbo, adNixon, cameron, jack, joey, mattSmart, lewis, charlie, callum))
   val madeleyResult: Result = Result(14, homeTeam = madeleyTeam, awayTeam = "Madeley CC FC", goalsFor = 0, goalsAgainst = 2, scorers = List(), assists = List(), date = LocalDate.of(2022, 1, 30))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult).reverse
+  //Other player was LJ
+  val wrekinTeam3:Team = Team(List(chad, luke, layton, lukeNixon, danSmout, charlie, adNixon, danGrimbo, cameron, adFox, lewis, kaleem))
+  val wrekinResult3: Result = Result(15, homeTeam = wrekinTeam3, awayTeam = "AFC Wrekin", goalsFor = 2, goalsAgainst = 3, scorers = List(kaleem, charlie), assists = List(kaleem), date = LocalDate.of(2022, 3, 6))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult, wrekinResult3).reverse
 
 //  ******** FIXTURES *********
 
-  val apleyFixture: Fixture = Fixture(opponent = "Apley United FC", date = LocalDate.of(2021, 2, 20), venue = "Ketley Bank", gameType = "league")
-  val madeleyFixture: Fixture = Fixture(opponent = "Madeley CC FC", date = LocalDate.of(2021, 2, 27), venue = "Ketley Bank", gameType = "league")
+  val bailsFixture: Fixture = Fixture(opponent = "Bell and Bails", date = LocalDate.of(2022, 3, 13), venue = "Ketley Bank", gameType = "league")
+  val queensFixture: Fixture = Fixture(opponent = "FC Queens", date = LocalDate.of(2022, 3, 20), venue = "Ketley Bank", gameType = "league")
+  val poloniaFixture: Fixture = Fixture(opponent = "Polonia Telford FC", date = LocalDate.of(2022, 3, 27), venue = "Ketley Bank", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(apleyFixture, madeleyFixture)
+  val fullFixtures: List[Fixture] = List(bailsFixture, queensFixture, poloniaFixture)
 
 }
