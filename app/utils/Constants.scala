@@ -30,9 +30,11 @@ object Constants {
   val callum: Player = Player(20, Name("Callum","Stainer"), "Midfielder")
   val kaleem: Player = Player(21, Name("Kaleem","Ramzan"), "Striker")
   val lj: Player = Player(22, Name("Liam","Johnson"), "Striker")
+  val ben: Player = Player(23, Name("Ben","Stokes"), "Defender")
+  val jackWills: Player = Player(24, Name("Jack","Williams"), "Striker")
 
   val fullTeam: Team = Team(List(joey, chad, mattMaiden, adFox, layton, jack, adNixon, danSmout, danSmart,
-    mattSmart, danGrimbo, charlie, kieran, cameron, luke, lewis, lukeNixon, rich, kieranW, callum, kaleem, lj).sortBy(_.name.lastName))
+    mattSmart, danGrimbo, charlie, kieran, cameron, luke, lewis, lukeNixon, rich, kieranW, callum, kaleem, lj, ben, jackWills).sortBy(_.name.lastName))
 
   //  ******** RESULTS ********
 
@@ -83,16 +85,17 @@ object Constants {
   val wrekinTeam3:Team = Team(List(chad, luke, layton, lukeNixon, danSmout, charlie, adNixon, danGrimbo, cameron, adFox, lewis, kaleem, lj))
   val wrekinResult3: Result = Result(15, homeTeam = wrekinTeam3, awayTeam = "AFC Wrekin", goalsFor = 2, goalsAgainst = 3, scorers = List(kaleem, charlie), assists = List(lj), date = LocalDate.of(2022, 3, 6))
 
-  //Other player were connor, charlie, ben stokes (dawley mongs)
-  val queensTeam2:Team = Team(List(chad, danSmout, lukeNixon, layton, jack, danGrimbo, adNixon, kaleem, adFox, lj, mattSmart, lewis, callum))
+  //Other player were connor, charlie(dawley mongs)
+  val queensTeam2:Team = Team(List(chad, danSmout, lukeNixon, layton, jack, danGrimbo, adNixon, kaleem, adFox, lj, mattSmart, lewis, callum, ben))
   val queensResult2: Result = Result(16, homeTeam = queensTeam2, awayTeam = "FC Queens", goalsFor = 2, goalsAgainst = 5, scorers = List(kaleem, adNixon), assists = List(lj, lj), date = LocalDate.of(2022, 3, 20))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult, wrekinResult3, queensResult2).reverse
+  val poloniaTeam2:Team = Team(List(chad, danSmout, layton, lukeNixon, danGrimbo, adNixon, mattMaiden, mattSmart, joey, callum, charlie, adFox, ben, jackWills))
+  val poloniaResult2: Result = Result(17, homeTeam = poloniaTeam2, awayTeam = "Polonia Telford FC", goalsFor = 1, goalsAgainst = 3, scorers = List(joey), assists = List(jackWills), date = LocalDate.of(2022, 3, 27))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult, wrekinResult3, queensResult2, poloniaResult2).reverse
 
 //  ******** FIXTURES *********
 
-  val poloniaFixture: Fixture = Fixture(opponent = "Polonia Telford FC", date = LocalDate.of(2022, 3, 27), venue = "Ketley Bank", gameType = "league")
-
-  val fullFixtures: List[Fixture] = List(poloniaFixture)
+  val fullFixtures: List[Fixture] = List()
 
 }
