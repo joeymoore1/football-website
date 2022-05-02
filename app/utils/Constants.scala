@@ -93,7 +93,10 @@ object Constants {
   val madeleyTeam2:Team = Team(List(chad, danSmout, layton, lukeNixon, ben, luke, adNixon, cameron, jackWills, joey, lj, kaleem, adFox))
   val madeleyResult2: Result = Result(18, homeTeam = madeleyTeam2, awayTeam = "Madeley CC FC", goalsFor = 2, goalsAgainst = 5, scorers = List(kaleem, kaleem), assists = List(jackWills), date = LocalDate.of(2022, 4, 9))
 
-  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult, wrekinResult3, queensResult2, poloniaResult2, madeleyResult2).reverse
+  val apleyTeam2:Team = Team(List(chad, danSmout, adFox, mattMaiden, callum, luke, lj, kaleem, charlie, jack, joey, mattSmart, lewis))
+  val apleyResult2: Result = Result(19, homeTeam = apleyTeam2, awayTeam = "Apley United FC", goalsFor = 1, goalsAgainst = 5, scorers = List(joey), assists = List(luke), date = LocalDate.of(2021, 4, 1))
+
+  val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult, wrekinResult3, queensResult2, poloniaResult2, madeleyResult2, apleyResult2).reverse
 
 //  ******** FIXTURES *********
 
