@@ -21,7 +21,7 @@
     @for(month <- months) {
     <h2>@month</h2>
     @for(result <- filterResults(month)){
-    @formatDate(result.date) <a class="result" href="@routes.ResultController.index(result.index)">St Georges @result.goalsFor - @result.goalsAgainst @result.awayTeam</a>
+    @formatDate(result.date) <a class="result" href="@routes.ResultController.index(result.index)">Turf Fc @result.goalsFor - @result.goalsAgainst @result.awayTeam</a>
     </br>
     }
     }

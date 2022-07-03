@@ -12,7 +12,6 @@
     <main>
     <h1>@player.name.firstName @player.name.lastName's Profile</h1>
     </br>
-
     <a>@player.name.firstName is a @player.position</a>
     </br>
     <a>Appearances: @appearances</a>
@@ -21,6 +20,6 @@
     </br>
     <a>Assists: @assists</a>
     </br>
-    <img src="@routes.Assets.versioned(s"images/${player.name.firstName} ${player.name.lastName}.jpg")" style="padding:10px;width:300px;height:300px;">
+    <img src="@routes.Assets.versioned(s"images/${player.name.firstName} ${player.name.lastName}.jpg")" style="padding:10px;width:300px;height:400px;">
     </main>
 }

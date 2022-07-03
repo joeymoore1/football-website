@@ -1,6 +1,6 @@
 @import models.Player
 
-@(keepers: List[Player],defenders: List[Player], midfielders: List[Player], strikers: List[Player])
+@(coaches: List[Player], keepers: List[Player], defenders: List[Player], midfielders: List[Player], strikers: List[Player], wingers: List[Player])
 
 @main("St Georges Team") {
     <div class="topnav">
@@ -15,6 +15,13 @@
     <main>
 
     <img src="@routes.Assets.versioned("images/team.jpg")" style="width:660px;height:400px;">
+    </br></br>
+
+    <a>Coaches</a></br>
+    @for(player <- coaches) {
+    <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
+    }
+
     </br></br>
 
     <a>Keepers</a></br>
@@ -33,6 +40,13 @@
 
     <a>Midfielders</a></br>
     @for(player <- midfielders) {
+    <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
+    }
+
+    </br></br>
+
+    <a>Wingers</a></br>
+    @for(player <- wingers) {
     <a class="playerName" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
     }
 
