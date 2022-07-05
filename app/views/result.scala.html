@@ -25,5 +25,7 @@
       @result.assists.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/assist.png")}">"""))
         </br>
       }
+      </br>
+      <h2>Maidens man of the match: @result.motm.name.firstName @result.motm.name.lastName</h2>
     </main>
 }

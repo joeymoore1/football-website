@@ -1,6 +1,6 @@
 @import models.Result
 
-@(goalScorers: Seq[playerStats], assistsPeople: Seq[playerStats])
+@(goalScorers: Seq[playerStats], assistsPeople: Seq[playerStats], motmList: Seq[playerStats])
 
 @main("Result") {
     <div class="topnav">
@@ -14,7 +14,7 @@
         <h1>Stats Page</h1>
         <section>
             @if(goalScorers.size >= 1){
-            <h2>Top Goals</h2>
+            <h2>Most Goals</h2>
             <a href="@routes.ProfileController.index(goalScorers.head.player.index)">@goalScorers.head.player.name.firstName @goalScorers.head.player.name.lastName: @goalScorers.head.goals</a>
             </br>
             <img src="@routes.Assets.versioned(s"images/${goalScorers.head.player.name.firstName} ${goalScorers.head.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
@@ -32,7 +32,7 @@
         </section>
         <section>
             @if(assistsPeople.size >= 1){
-            <h2>Top Assists</h2>
+            <h2>Most Assists</h2>
             <a href="@routes.ProfileController.index(assistsPeople.head.player.index)">@assistsPeople.head.player.name.firstName @assistsPeople.head.player.name.lastName: @assistsPeople.head.assists</a>
             </br>
             <img src="@routes.Assets.versioned(s"images/${assistsPeople.head.player.name.firstName} ${assistsPeople.head.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
@@ -46,6 +46,24 @@
             }
             @if(assistsPeople.size < 1){
             <h2>No assists yet</h2>
+            }
+        </section>
+        <section>
+            @if(motmList.size >= 1){
+            <h2>Most Motm's</h2>
+            <a href="@routes.ProfileController.index(motmList.head.player.index)">@motmList.head.player.name.firstName @motmList.head.player.name.lastName: @motmList.head.motms</a>
+            </br>
+            <img src="@routes.Assets.versioned(s"images/${motmList.head.player.name.firstName} ${motmList.head.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
+            </br>
+
+            <h2>Other Motm's</h2>
+            @for(player <- motmList.tail) {
+            <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.assists</a>
+            </br>
+            }
+            }
+            @if(motmList.size < 1){
+            <h2>No motm's yet</h2>
             }
         </section>
     </main>

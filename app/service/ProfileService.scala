@@ -32,6 +32,16 @@ class ProfileService @Inject()() {
     assists
   }
 
+  def getMotmsForPlayer(player: Player): Int = {
+    var motms = 0
+    for (result <- fullResults){
+      if(result.motm.equals(player)){
+        motms +=1
+      }
+    }
+    motms
+  }
+
   def getWinsForPlayer(player: Player): String = {
     val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
     var wins = 0
