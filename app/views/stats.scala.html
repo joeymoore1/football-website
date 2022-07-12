@@ -58,7 +58,7 @@
 
             <h2>Other Motm's</h2>
             @for(player <- motmList.tail) {
-            <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.assists</a>
+            <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.motms</a>
             </br>
             }
             }
