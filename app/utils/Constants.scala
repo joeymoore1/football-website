@@ -31,9 +31,11 @@ object Constants {
   val lewis: Player = Player(21, Name("Lewis","Winfindale"), "Midfielder")
   val ben: Player = Player(22, Name("Ben","Robinson"), "Midfielder")
   val rhys: Player = Player(23, Name("Rhys","Clarkson"), "Striker")
+  val josh: Player = Player(24, Name("Josh","Cooper"), "Midfielder")
+  val conlon: Player = Player(25, Name("Conlon","Vinters"), "Midfielder")
 
   val fullTeam: Team = Team(List(joey, chad, mattMaiden, layton, adNixon, danSmout, luke, danGrimbo, charlie, cameron,
-    lukeNixon, callum, ste, ross, lee, matt, david, jobbo, malin, scott, lewis, ben, rhys).sortBy(_.name.lastName))
+    lukeNixon, callum, ste, ross, lee, matt, david, jobbo, malin, scott, lewis, ben, rhys, josh, conlon).sortBy(_.name.lastName))
 
   // ********* Preseason results *********
 
@@ -43,9 +45,16 @@ object Constants {
   val minersTeam:Team = Team(List(malin, luke, lukeNixon, ross, ste, layton, jobbo, adNixon, rhys, charlie, joey, chad, danSmout, danGrimbo, callum))
   val minersResult: Result = Result(2, homeTeam = minersTeam, awayTeam = "Miners Arms", goalsFor = 1, goalsAgainst = 4, scorers = List(ross), assists = List(luke), motm = ross, date = LocalDate.of(2022, 7, 10))
 
+  //Other player was jobbos mate jordan
+  val unicornTeam:Team = Team(List(malin, danGrimbo, ste, ross, luke, layton, conlon, josh, jobbo, rhys,mattMaiden))
+  val unicornResult: Result = Result(3, homeTeam = unicornTeam, awayTeam = "Unicorn FC", goalsFor = 5, goalsAgainst = 0, scorers = List(josh, conlon, josh, mattMaiden), assists = List(layton, conlon, josh, ross), motm = josh, date = LocalDate.of(2022, 7, 17))
+
+  val wrockersTeam:Team = Team(List(malin, ross, adNixon, danGrimbo, luke, josh, jobbo, layton, joey, callum, ben, charlie, chad, scott, mattMaiden, matt))
+  val wrockersResult: Result = Result(4, homeTeam = wrockersTeam, awayTeam = "Wrockwardine Wood FC", goalsFor = 0, goalsAgainst = 2, scorers = List(), assists = List(), motm = layton, date = LocalDate.of(2022, 7, 21))
+
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(shifnalResult, minersResult).reverse
+  val fullResults: List[Result] = List(shifnalResult, minersResult, unicornResult, wrockersResult).reverse
 
 //  ******** FIXTURES *********
 

@@ -18,8 +18,6 @@ class StatsController @Inject()(val controllerComponents: ControllerComponents,
 
     val motmList = playerStatsList(fullTeam.players).filter(_.motms > 0).sortBy(x => (-x.motms, x.player.name.lastName))
 
-    println("Amount of motm's is: " + motmList.size)
-
     Ok(views.html.stats(goalScorerList, assistsList, motmList))
   }
 
