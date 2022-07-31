@@ -62,9 +62,12 @@ object Constants {
   val telfordTeam:Team = Team(List(callum, jake, layton, danGrimbo, ste, lewis, josh, jobbo, joey, rhys, kaleem, lee, ben, charlie))
   val telfordResult: Result = Result(6, homeTeam = telfordTeam, awayTeam = "AFC Telford UTD", goalsFor = 4, goalsAgainst = 2, scorers = List(kaleem, kaleem, kaleem, josh), assists = List(joey, joey, jobbo), motm = kaleem, date = LocalDate.of(2022, 7, 27))
 
+  val poloniaTeam:Team = Team(List(callum, danSmout, danGrimbo, ste, ross, charlie, layton, conlon, joey, rhys, josh, mattMaiden, scott, lewis))
+  val poloniaResult: Result = Result(7, homeTeam = poloniaTeam, awayTeam = "Polonia Telford FC", goalsFor = 4, goalsAgainst = 1, scorers = List(rhys, conlon, josh, scott), assists = List(joey, layton, danSmout), motm = callum, date = LocalDate.of(2022, 7, 31))
+
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(shifnalResult, minersResult, unicornResult, wrockersResult, wicketsResult, telfordResult).reverse
+  val fullResults: List[Result] = List(shifnalResult, minersResult, unicornResult, wrockersResult, wicketsResult, telfordResult, poloniaResult).reverse
 
 //  ******** FIXTURES *********
 

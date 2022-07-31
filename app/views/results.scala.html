@@ -8,7 +8,7 @@
 @formatDate(date:LocalDate) = @{date.format(DateTimeFormatter.ofPattern("E, dd"))}
 @filterResults(month: String) = @{results.filter(_.date.format(DateTimeFormatter.ofPattern("MMMM")) == month)}
 
-@main("St Georges Results") {
+@main("Turf Results") {
     <div class="topnav">
       <a href="@routes.HomeController.index()">Home</a>
       <a href="@routes.TeamController.team()">The Team</a>
