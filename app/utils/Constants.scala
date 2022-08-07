@@ -27,8 +27,8 @@ object Constants {
   val david: Player = Player(17, Name("David","Vitova"), "Winger")
   val jobbo: Player = Player(18, Name("Tom","Jobburns"), "Midfielder")
   val malin: Player = Player(19, Name("Matty","Malin"), "Keeper")
-  val scott: Player = Player(20, Name("Scott","Franks"), "Midfielder")
-  val lewis: Player = Player(21, Name("Lewis","Winfindale"), "Midfielder")
+  val scott: Player = Player(20, Name("Scott","Franks"), "Striker")
+  val lewis: Player = Player(21, Name("Lewis","Winfindale"), "Defender")
   val ben: Player = Player(22, Name("Ben","Robinson"), "Midfielder")
   val rhys: Player = Player(23, Name("Rhys","Clarkson"), "Striker")
   val josh: Player = Player(24, Name("Josh","Cooper"), "Midfielder")
@@ -68,9 +68,12 @@ object Constants {
   val wrockersTeam2:Team = Team(List(malin, jake, ross, ste, danGrimbo, lukeNixon, jobbo, adNixon, joey, josh, callum, scott, charlie, ben))
   val wrockersResult2: Result = Result(8, homeTeam = wrockersTeam2, awayTeam = "Wrockwardine Wood FC", goalsFor = 6, goalsAgainst = 1, scorers = List(joey, jake, ross, callum), assists = List(josh, josh, josh, jake, jake, jobbo), motm = jake, date = LocalDate.of(2022, 8, 4))
 
+  val railwayTeam:Team = Team(List(callum, danSmout, ste, adNixon, lukeNixon, jobbo, layton, conlon, joey, rhys, josh, charlie, scott))
+  val railwayResult: Result = Result(9, homeTeam = railwayTeam, awayTeam = "Railway United", goalsFor = 3, goalsAgainst = 3, scorers = List(joey, joey, ste), assists = List(josh, rhys, rhys), motm = adNixon, date = LocalDate.of(2022, 8, 7))
+
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(shifnalResult, minersResult, unicornResult, wrockersResult, wicketsResult, telfordResult, poloniaResult, wrockersResult2).reverse
+  val fullResults: List[Result] = List(shifnalResult, minersResult, unicornResult, wrockersResult, wicketsResult, telfordResult, poloniaResult, wrockersResult2, railwayResult).reverse
 
 //  ******** FIXTURES *********
 
