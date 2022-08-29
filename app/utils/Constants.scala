@@ -73,7 +73,7 @@ object Constants {
   val railwayResult: Result = Result(9, homeTeam = railwayTeam, awayTeam = "Railway United", goalsFor = 3, goalsAgainst = 3, scorers = List(joey, joey, ste), assists = List(josh, rhys, rhys), motm = adNixon, date = LocalDate.of(2022, 8, 7))
 
   val impactTeam:Team = Team(List(malin, ross, ste, danGrimbo, bob, luke, josh, layton, joey, rhys, kaleem, scott, lukeNixon, callum))
-  val impactResult: Result = Result(10, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 3, goalsAgainst = 2, scorers = List(rhys, ross, kaleem), assists = List(joey, ross, lukeNixon), motm = mattMaiden, date = LocalDate.of(2022, 8, 21))
+  val impactResult: Result = Result(10, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 3, goalsAgainst = 2, scorers = List(rhys, ross, kaleem), assists = List(joey, ross, lukeNixon), motm = lukeNixon, date = LocalDate.of(2022, 8, 21))
 
   //  ******** RESULTS ********
 
