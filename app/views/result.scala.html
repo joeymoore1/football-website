@@ -23,6 +23,7 @@
       <a class="resultPlayer" href="@routes.ProfileController.index(player.index)">@player.name.firstName @player.name.lastName</a>
       @result.scorers.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/football.png")}">"""))
       @result.assists.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/assist.png")}">"""))
+      @result.yellowCards.filter(_ == player).map(_ => Html(s""" <img width=20 src="${routes.Assets.versioned("images/yellow_card.png")}">"""))
         </br>
       }
       </br>

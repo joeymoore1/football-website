@@ -42,6 +42,14 @@ class ProfileService @Inject()() {
     motms
   }
 
+  def getYellowsForPlayer(player: Player): Int = {
+    var yellows = 0
+    for (result <- fullResults) {
+      yellows += result.yellowCards.count(_ == player)
+    }
+    yellows
+  }
+
   def getWinsForPlayer(player: Player): String = {
     val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
     var wins = 0

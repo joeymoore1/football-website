@@ -59,7 +59,7 @@ object Constants {
   // yellow card was josh
   val unicornTeam:Team = Team(List(malin, luke, ste, adNixon, lukeNixon, ben, layton, jobbo, joey, josh, kaleem, rhys, callum, cameron, jake))
   val unicornResult: Result = Result(1, homeTeam = unicornTeam, awayTeam = unicorn, goalsFor = 6, goalsAgainst = 1, scorers = List(joey, rhys, rhys, rhys, josh, jobbo),
-    assists = List(jobbo, joey, joey, joey, cameron, ben), motm = rhys, date = LocalDate.of(2022, 9, 4))
+    assists = List(jobbo, joey, joey, joey, cameron, ben), motm = rhys, date = LocalDate.of(2022, 9, 4), yellowCards = List(josh))
 
   val wrockersTeam: Team = Team(List(malin, ross, ste, lukeNixon, danGrimbo, jake, jobbo, layton, joey, rhys, josh, lee, cameron, kaleem, adNixon, conlon))
   val wrockersResult: Result = Result(2, homeTeam = wrockersTeam, awayTeam = wrockers, goalsFor = 2, goalsAgainst = 2, scorers = List(ste, kaleem),
