@@ -34,7 +34,7 @@ object Constants {
   val josh: Player = Player(24, Name("Josh","Cooper"), "Midfielder")
   val conlon: Player = Player(25, Name("Conlon","Vinters"), "Midfielder")
   val kaleem: Player = Player(26, Name("Kaleem","Ramzan"), "Striker")
-  val jake: Player = Player(27, Name("Jake","Cook"), "Midfielder")
+  val jake: Player = Player(27, Name("Jake","Cooksey"), "Midfielder")
   val bob: Player = Player(28, Name("Bob","Cowdrill"), "Defender")
 
   //  ******** TEAMS ********
@@ -56,20 +56,23 @@ object Constants {
 
   // ********* Preseason results *********
 
+  // yellow card was josh
   val unicornTeam:Team = Team(List(malin, luke, ste, adNixon, lukeNixon, ben, layton, jobbo, joey, josh, kaleem, rhys, callum, cameron, jake))
   val unicornResult: Result = Result(1, homeTeam = unicornTeam, awayTeam = unicorn, goalsFor = 6, goalsAgainst = 1, scorers = List(joey, rhys, rhys, rhys, josh, jobbo),
     assists = List(jobbo, joey, joey, joey, cameron, ben), motm = rhys, date = LocalDate.of(2022, 9, 4))
 
+  val wrockersTeam: Team = Team(List(malin, ross, ste, lukeNixon, danGrimbo, jake, jobbo, layton, joey, rhys, josh, lee, cameron, kaleem, adNixon, conlon))
+  val wrockersResult: Result = Result(2, homeTeam = wrockersTeam, awayTeam = wrockers, goalsFor = 2, goalsAgainst = 2, scorers = List(ste, kaleem),
+    assists = List(cameron, ross), motm = jobbo, date = LocalDate.of(2022, 9, 18))
+
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(unicornResult).reverse
+  val fullResults: List[Result] = List(unicornResult, wrockersResult).reverse
 
 //  ******** FIXTURES *********
 
-  val dunCowFixture: Fixture = Fixture(opponent = dunCow, date = LocalDate.of(2022, 9, 11), venue = "unknown", gameType = "league")
-  val wrockersFixture: Fixture = Fixture(opponent = wrockers, date = LocalDate.of(2022, 9, 18), venue = "Ketley Bank", gameType = "league")
   val roseFixture: Fixture = Fixture(opponent = rose, date = LocalDate.of(2022, 9, 25), venue = "unknown", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(dunCowFixture, wrockersFixture, roseFixture)
+  val fullFixtures: List[Fixture] = List(roseFixture)
 
 }
