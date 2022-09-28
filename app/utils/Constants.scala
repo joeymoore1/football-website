@@ -65,14 +65,21 @@ object Constants {
   val wrockersResult: Result = Result(2, homeTeam = wrockersTeam, awayTeam = wrockers, goalsFor = 2, goalsAgainst = 2, scorers = List(ste, kaleem),
     assists = List(cameron, ross), motm = jobbo, date = LocalDate.of(2022, 9, 18))
 
+  val roseTeam: Team = Team(List(malin, luke, ross, ste, bob, danGrimbo, jake, jobbo, layton, joey, rhys, josh, lee, adNixon, conlon, callum))
+  val roseResult: Result = Result(3, homeTeam = roseTeam, awayTeam = rose, goalsFor = 2, goalsAgainst = 4, scorers = List(josh, lee),
+    assists = List(luke, luke), motm = conlon, date = LocalDate.of(2022, 9, 25), yellowCards = List(josh))
+
+
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(unicornResult, wrockersResult).reverse
+  val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult).reverse
 
 //  ******** FIXTURES *********
 
-  val roseFixture: Fixture = Fixture(opponent = rose, date = LocalDate.of(2022, 9, 25), venue = "unknown", gameType = "league")
+  val ellesmereFixture: Fixture = Fixture(opponent = "Ellesmere United FC", date = LocalDate.of(2022, 10, 2), venue = "Ketley Bank", gameType = "cup")
+  val bailsFixture: Fixture = Fixture(opponent = bails, date = LocalDate.of(2022, 10, 16), venue = "Ketley Bank", gameType = "league")
+  val wenlockFixture: Fixture = Fixture(opponent = wenlock, date = LocalDate.of(2022, 10, 23), venue = "unknown", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(roseFixture)
+  val fullFixtures: List[Fixture] = List(ellesmereFixture, bailsFixture, wenlockFixture)
 
 }
