@@ -33,7 +33,6 @@ object Constants {
   val rhys: Player = Player(23, Name("Rhys","Clarkson"), "Striker")
   val josh: Player = Player(24, Name("Josh","Cooper"), "Midfielder")
   val conlon: Player = Player(25, Name("Conlon","Vinters"), "Midfielder")
-  val kaleem: Player = Player(26, Name("Kaleem","Ramzan"), "Striker")
   val jake: Player = Player(27, Name("Jake","Cooksey"), "Midfielder")
   val bob: Player = Player(28, Name("Bob","Cowdrill"), "Defender")
 
@@ -54,16 +53,17 @@ object Constants {
   val nations = "FC Nations"
 
   val fullTeam: Team = Team(List(joey, chad, mattMaiden, layton, adNixon, danSmout, luke, danGrimbo, charlie, cameron,
-    lukeNixon, callum, ste, ross, lee, matt, david, jobbo, malin, scott, lewis, ben, rhys, josh, conlon, kaleem, jake, bob).sortBy(_.name.lastName))
+    lukeNixon, callum, ste, ross, lee, matt, david, jobbo, malin, scott, lewis, ben, rhys, josh, conlon, jake, bob).sortBy(_.name.lastName))
 
   // ********* Preseason results *********
 
-  val unicornTeam:Team = Team(List(malin, luke, ste, adNixon, lukeNixon, ben, layton, jobbo, joey, josh, kaleem, rhys, callum, cameron, jake))
+  val unicornTeam:Team = Team(List(malin, luke, ste, adNixon, lukeNixon, ben, layton, jobbo, joey, josh, rhys, callum, cameron, jake))
   val unicornResult: Result = Result(1, homeTeam = unicornTeam, awayTeam = unicorn, goalsFor = 6, goalsAgainst = 1, scorers = List(joey, rhys, rhys, rhys, josh, jobbo),
     assists = List(jobbo, joey, joey, joey, cameron, ben), motm = rhys, date = LocalDate.of(2022, 9, 4), yellowCards = List(josh))
 
-  val wrockersTeam: Team = Team(List(malin, ross, ste, lukeNixon, danGrimbo, jake, jobbo, layton, joey, rhys, josh, lee, cameron, kaleem, adNixon, conlon))
-  val wrockersResult: Result = Result(2, homeTeam = wrockersTeam, awayTeam = wrockers, goalsFor = 2, goalsAgainst = 2, scorers = List(ste, kaleem),
+  //Other goal was kaleem
+  val wrockersTeam: Team = Team(List(malin, ross, ste, lukeNixon, danGrimbo, jake, jobbo, layton, joey, rhys, josh, lee, cameron, adNixon, conlon))
+  val wrockersResult: Result = Result(2, homeTeam = wrockersTeam, awayTeam = wrockers, goalsFor = 2, goalsAgainst = 2, scorers = List(ste),
     assists = List(cameron, ross), motm = jobbo, date = LocalDate.of(2022, 9, 18))
 
   val roseTeam: Team = Team(List(malin, luke, ross, ste, bob, danGrimbo, jake, jobbo, layton, joey, rhys, josh, lee, adNixon, conlon, callum))
