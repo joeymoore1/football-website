@@ -82,16 +82,25 @@ object Constants {
   val nationsResult: Result = Result(6, homeTeam = nationsTeam, awayTeam = nations, goalsFor = 2, goalsAgainst = 4, scorers = List(conlon, david),
     assists = List(rhys), motm = conlon, yellowCards = List(josh), date = LocalDate.of(2022, 11, 6))
 
+  val dunCowTeam: Team = Team(List(malin, lukeNixon, bob, ste, ross, conlon, adNixon, layton, jobbo, lee, josh, callum, luke, danGrimbo, rhys, jake))
+  val dunCowResult: Result = Result(7, homeTeam = dunCowTeam, awayTeam = dunCow, goalsFor = 4, goalsAgainst = 3, scorers = List(lee, lee, lee, josh),
+    assists = List(malin, josh, adNixon, lee), motm = lee, date = LocalDate.of(2022, 11, 13))
+
+  val cottageTeam: Team = Team(List(malin, jake, bob, ste, ross, jobbo, layton, adNixon, joey, josh, lee, danGrimbo, charlie, callum, danSmout, conlon))
+  val cottageResult: Result = Result(8, homeTeam = cottageTeam, awayTeam = cottage, goalsFor = 5, goalsAgainst = 0, scorers = List(lee, lee, lee, joey, ross),
+    assists = List(josh, josh, jobbo, jobbo, joey), motm = jobbo, yellowCards = List(mattMaiden), date = LocalDate.of(2022, 11, 20))
+
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult).reverse
+  val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult, dunCowResult, cottageResult).reverse
 
 //  ******** FIXTURES *********
 
-  val dunCowFixture: Fixture = Fixture(opponent = dunCow, date = LocalDate.of(2022, 11, 13), venue = "Ketley Bank", gameType = "league")
-  val cottageFixture: Fixture = Fixture(opponent = cottage, date = LocalDate.of(2022, 11, 20), venue = "Ketley Bank", gameType = "league")
   val queensFixture: Fixture = Fixture(opponent = queens, date = LocalDate.of(2022, 11, 27), venue = "Bowring Park", gameType = "league")
+  val wrockersFixture: Fixture = Fixture(opponent = wrockers, date = LocalDate.of(2022, 12, 4), venue = "Wrockwardine Wood", gameType = "league")
+  val wrekinFixture: Fixture = Fixture(opponent = wrekin, date = LocalDate.of(2022, 12, 11), venue = "Ketley Bank", gameType = "league")
+  val wickettsFixture: Fixture = Fixture(opponent = wickets, date = LocalDate.of(2022, 12, 18), venue = "Phoenix", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(dunCowFixture, cottageFixture, queensFixture)
+  val fullFixtures: List[Fixture] = List(queensFixture, wrockersFixture, wrekinFixture, wickettsFixture)
 
 }
