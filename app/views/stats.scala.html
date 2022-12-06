@@ -1,6 +1,6 @@
 @import models.Result
 
-@(goalScorers: Seq[playerStats], assistsPeople: Seq[playerStats], motmList: Seq[playerStats], yellowsList: Seq[playerStats])
+@(goalScorers: Seq[playerStats], assistsPeople: Seq[playerStats], motmList: Seq[playerStats], yellowsList: Seq[playerStats], redsList: Seq[playerStats])
 
 @main("Result") {
     <div class="topnav">
@@ -82,6 +82,24 @@
             }
             @if(yellowsList.size < 1){
             <h2>No yellow cards yet</h2>
+            }
+        </section>
+        <section>
+            @if(redsList.size >= 1){
+            <h2>Most red cards</h2>
+            <a href="@routes.ProfileController.index(redsList.head.player.index)">@redsList.head.player.name.firstName @redsList.head.player.name.lastName: @redsList.head.redCards</a>
+            </br>
+            <img src="@routes.Assets.versioned(s"images/${redsList.head.player.name.firstName} ${redsList.head.player.name.lastName}.jpg")" style="padding:10px;width:200px;height:200px;">
+            </br>
+
+            <h2>Other red cards</h2>
+            @for(player <- redsList.tail) {
+            <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.redCards</a>
+            </br>
+            }
+            }
+            @if(redsList.size < 1){
+            <h2>No red cards yet</h2>
             }
         </section>
     </main>

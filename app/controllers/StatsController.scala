@@ -20,12 +20,15 @@ class StatsController @Inject()(val controllerComponents: ControllerComponents,
 
     val yellowCardsList = playerStatsList(fullTeam.players).filter(_.yellowCards > 0).sortBy(x => (-x.yellowCards, x.player.name.lastName))
 
-    Ok(views.html.stats(goalScorerList, assistsList, motmList, yellowCardsList))
+    val redCardsList = playerStatsList(fullTeam.players).filter(_.redCards > 0).sortBy(x => (-x.redCards, x.player.name.lastName))
+
+    Ok(views.html.stats(goalScorerList, assistsList, motmList, yellowCardsList, redCardsList))
   }
 
   def playerStatsList(players:List[Player]):List[playerStats] = {
     players.map(l => playerStats(l, profileService.getGoalsForPlayer(l), profileService.getAssistsForPlayer(l),
-      profileService.getAppearances(l), profileService.getMotmsForPlayer(l), profileService.getYellowsForPlayer(l)))
+      profileService.getAppearances(l), profileService.getMotmsForPlayer(l), profileService.getYellowsForPlayer(l),
+      profileService.getRedsForPlayer(l)))
   }
 }
   

@@ -1,5 +1,5 @@
 @import models.Player
-@(player: Player, appearances: Int, goals: Int, assists: Int, motms: Int, yellows: Int)
+@(player: Player, appearances: Int, goals: Int, assists: Int, motms: Int, yellows: Int, reds: Int)
 
 @main("Player Profile") {
     <div class="topnav">
@@ -34,6 +34,11 @@
 
     @if(yellows >= 1){
         <a>Yellow Cards: @yellows</a>
+        </br>
+    }
+
+    @if(reds >= 1){
+        <a>Red Cards: @reds</a>
         </br>
     }
 

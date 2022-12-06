@@ -50,6 +50,14 @@ class ProfileService @Inject()() {
     yellows
   }
 
+  def getRedsForPlayer(player: Player): Int = {
+    var reds = 0
+    for (result <- fullResults) {
+      reds += result.redCards.count(_ == player)
+    }
+    reds
+  }
+
   def getWinsForPlayer(player: Player): String = {
     val filterResultsByPlayer = fullResults.filter(_.homeTeam.players.contains(player))
     var wins = 0

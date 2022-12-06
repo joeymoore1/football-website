@@ -21,7 +21,9 @@ class ProfileController @Inject()(val controllerComponents: ControllerComponents
 
     val yellows = profileService.getYellowsForPlayer(player)
 
-    Ok(views.html.profile(player, appearances, goals, assists, motms, yellows))
+    val reds = profileService.getRedsForPlayer(player)
+
+    Ok(views.html.profile(player, appearances, goals, assists, motms, yellows, reds))
   }
 
 }

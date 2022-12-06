@@ -7,9 +7,10 @@ case class Result(index: Int,
                   awayTeam: String,
                   goalsFor: Int,
                   goalsAgainst: Int,
-                  scorers: List[Player],
-                  assists: List[Player],
+                  scorers: List[Player] = Nil,
+                  assists: List[Player] = Nil,
                   motm: Player = null,
                   date:LocalDate,
-                  yellowCards: List[Player] = Nil
+                  yellowCards: List[Player] = Nil,
+                  redCards: List[Player] = Nil
                  )
