@@ -1,9 +1,19 @@
 name := """football-project"""
 organization := "com.example"
 
-version := "1.0-SNAPSHOT"
+version := "1"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
+
+assembly / assemblyJarName := s"${name.value}.jar"
+
+assembly / mainClass := Some("play.core.server.ProdServerStart")
+assembly / fullClasspath += Attributed.blank(PlayKeys.playPackageAssets.value)
+
+assemblyMergeStrategy in assembly := {
+  case PathList("META-INF", _*) => MergeStrategy.discard
+  case _                        => MergeStrategy.first
+}
 
 scalaVersion := "2.13.6"
 
