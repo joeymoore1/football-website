@@ -1,2 +1,3 @@
-FROM openjdk:8-jre-alpine
+FROM mozilla/sbt:latest
+RUN sbt assembly
 COPY target/scala-2.13/football-project.jar /app/my-service.jar
