@@ -94,16 +94,24 @@ object Constants {
   val wrockersResult2: Result = Result(10, homeTeam = wrockersTeam2, awayTeam = wrockers, goalsFor = 0, goalsAgainst = 2, motm = adNixon,
     yellowCards = List(jobbo), redCards = List(josh, mattMaiden), date = LocalDate.of(2022, 12, 4))
 
+  val phezTeam: Team = Team(List(malin, adNixon, lukeNixon, ross, cameron, lee, layton, josh, joey, dave, rhys, jake, ste, luke))
+  val phezResult: Result = Result(11, homeTeam = phezTeam, awayTeam = phez, goalsFor = 3, goalsAgainst = 2, motm = lee,
+    yellowCards = List(josh), scorers = List(lee, lee, josh), assists = List(jake), date = LocalDate.of(2023, 1, 8))
+
+  val queensTeam2: Team = Team(List(malin, lukeNixon, ste, ross, cameron, jobbo, jake, joey, dave, josh, lee, rhys, luke, danGrimbo, scott, ben))
+  val queensResult2: Result = Result(12, homeTeam = queensTeam2, awayTeam = queens, goalsFor = 1, goalsAgainst = 5, motm = jobbo,
+    yellowCards = List(josh, dave), scorers = List(jake), assists = List(dave), date = LocalDate.of(2023, 1, 17))
+
   //  ******** RESULTS ********
 
   val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
-    dunCowResult, cottageResult, queensResult, wrockersResult2).reverse
+    dunCowResult, cottageResult, queensResult, wrockersResult2, phezResult, queensResult2).reverse
 
 //  ******** FIXTURES *********
 
-  val wrekinFixture: Fixture = Fixture(opponent = wrekin, date = LocalDate.of(2022, 12, 11), venue = "Ketley Bank", gameType = "league")
-  val wickettsFixture: Fixture = Fixture(opponent = wickets, date = LocalDate.of(2022, 12, 18), venue = "Phoenix", gameType = "league")
+  val dunCowFixture: Fixture = Fixture(opponent = dunCow, date = LocalDate.of(2022, 1, 22), venue = "Ketley Bank", gameType = "league")
+  val bailsFixture: Fixture = Fixture(opponent = bails, date = LocalDate.of(2022, 1, 29), venue = "HLC", gameType = "league")
 
-  val fullFixtures: List[Fixture] = List(wrekinFixture, wickettsFixture)
+  val fullFixtures: List[Fixture] = List(dunCowFixture, bailsFixture)
 
 }
