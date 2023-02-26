@@ -119,16 +119,18 @@ object Constants {
   val crownResult: Result = Result(16, homeTeam = crownTeam, awayTeam = rose, goalsFor = 3, goalsAgainst = 1, scorers = List(joey, joey, rhys),
     assists = List(rhys, scott), yellowCards = List(ste, scott, josh), motm = malin, date = LocalDate.of(2023, 2, 19))
 
+  val cottageTeam2: Team = Team(List(malin, jake, danGrimbo, ross, lukeNixon, josh, layton, ste, joey, rhys, lee, harvey, conlon, jobbo, charlie))
+  val cottageResult2: Result = Result(17, homeTeam = cottageTeam2, awayTeam = cottage, goalsFor = 3, goalsAgainst = 2, scorers = List(joey, josh, josh),
+    assists = List(joey), yellowCards = List(josh), motm = lukeNixon, date = LocalDate.of(2023, 2, 26))
+
   //  ******** RESULTS ********
 
   val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
     dunCowResult, cottageResult, queensResult, wrockersResult2, phezResult, queensResult2, bailsResult2, wrekinResult,
-    wickettsResult, crownResult).reverse
+    wickettsResult, crownResult, cottageResult2).reverse
 
 //  ******** FIXTURES *********
 
-  val cottageFixture: Fixture = Fixture(opponent = cottage, date = LocalDate.of(2023, 2, 26), venue = "Ketley Bank", gameType = "league")
-
-  val fullFixtures: List[Fixture] = List(cottageFixture)
+  val fullFixtures: List[Fixture] = List()
 
 }
