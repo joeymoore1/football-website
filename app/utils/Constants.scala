@@ -131,11 +131,16 @@ object Constants {
   val phezResult2: Result = Result(19, homeTeam = phezTeam2, awayTeam = phez, goalsFor = 6, goalsAgainst = 1, scorers = List(lee, lee, lee, joey, joey, dave),
     assists = List(lee, lee, josh, layton, malin, adNixon), motm = joey, date = LocalDate.of(2023, 3, 19))
 
+  val cottageTeam3: Team = Team(List(malin, ste, ross, lukeNixon, danGrimbo, adNixon, josh, joey, lee, jake, jobbo, harvey))
+  val cottageResult3: Result = Result(20, homeTeam = cottageTeam3, awayTeam = cottage, goalsFor = 6, goalsAgainst = 0, scorers = List(lee, lee, lee, joey, ste, jobbo),
+    assists = List(lee, lee, lee, joey, adNixon, harvey), yellowCards = List(josh),motm = lee, date = LocalDate.of(2023, 4, 2))
+
+
   //  ******** RESULTS ********
 
   val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
     dunCowResult, cottageResult, queensResult, wrockersResult2, phezResult, queensResult2, bailsResult2, wrekinResult,
-    wickettsResult, crownResult, cottageResult2, crownResult2, phezResult2).reverse
+    wickettsResult, crownResult, cottageResult2, crownResult2, phezResult2, cottageResult3).reverse
 
 //  ******** FIXTURES *********
 
