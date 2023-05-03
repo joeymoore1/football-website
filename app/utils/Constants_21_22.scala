@@ -120,8 +120,5 @@ object Constants_21_22 {
 
   val fullResults: List[Result] = List(phezResult, impactResult, bullResult, poloniaResult, queensResult, travsResult, impact2Result, apleyResult, wrekinResult, phez2Result, bellBailsResult, travsResult2, wrekinResult2, madeleyResult, wrekinResult3, queensResult2, poloniaResult2, madeleyResult2, apleyResult2, bellBailsResult2).reverse
 
-//  ******** FIXTURES *********
-
-  val fullFixtures: List[Fixture] = List()
 
 }

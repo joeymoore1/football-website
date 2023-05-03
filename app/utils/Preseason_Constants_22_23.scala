@@ -74,16 +74,12 @@ object Preseason_Constants_22_23 {
   val impactTeam:Team = Team(List(malin, ross, ste, danGrimbo, bob, luke, josh, layton, joey, rhys, kaleem, scott, lukeNixon, callum))
   val impactResult: Result = Result(10, homeTeam = impactTeam, awayTeam = "Impact FC", goalsFor = 3, goalsAgainst = 2, scorers = List(rhys, ross, kaleem), assists = List(joey, ross, lukeNixon), motm = lukeNixon, date = LocalDate.of(2022, 8, 21))
 
-  // Extra player was some bald bloke
+  // Extra player was some bully
   val madeleyTeam:Team = Team(List(callum, luke, lee, ste, adNixon, lukeNixon, layton, jobbo, joey, josh, kaleem, scott, ben, rhys, cameron))
   val madeleyResult: Result = Result(11, homeTeam = madeleyTeam, awayTeam = "Madeley CC FC", goalsFor = 6, goalsAgainst = 0, scorers = List(joey, joey, josh, scott, lee), assists = List(joey, josh, josh, lukeNixon, layton), motm = ste, date = LocalDate.of(2022, 8, 31))
 
   //  ******** RESULTS ********
 
   val fullResults: List[Result] = List(shifnalResult, minersResult, unicornResult, wrockersResult, wicketsResult, telfordResult, poloniaResult, wrockersResult2, railwayResult, impactResult, madeleyResult).reverse
-
-//  ******** FIXTURES *********
-
-  val fullFixtures: List[Fixture] = List()
 
 }

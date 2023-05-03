@@ -9,7 +9,7 @@ case class Result(index: Int,
                   goalsAgainst: Int,
                   scorers: List[Player] = Nil,
                   assists: List[Player] = Nil,
-                  motm: Player = null,
+                  motm: Player = Player(47, Name("Fake", "Player"), "Winger"),
                   date:LocalDate,
                   yellowCards: List[Player] = Nil,
                   redCards: List[Player] = Nil
