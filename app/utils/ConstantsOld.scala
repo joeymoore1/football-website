@@ -295,13 +295,21 @@ object ConstantsOld {
   val dunCowResult2: Result = Result(23, homeTeam = dunCowTeam2, awayTeam = dunCow, goalsFor = 7, goalsAgainst = 2, scorers = List(lee, lee, lee, lee, josh, jj, jj),
     assists = List(jake, luke, danGrimbo, josh, joey, lee), redCards = List(conlon), motm = lee, date = LocalDate.of(2023, 4, 23))
 
+  val wickettsTeam2: Team = Team(List(malin, jake, ste, layton, danGrimbo, harvey, jobbo, dave, josh, joey, lee, rhys))
+  val wickettsResult2: Result = Result(24, homeTeam = wickettsTeam2, awayTeam = wickets, goalsFor = 3, goalsAgainst = 8, scorers = List(joey, rhys),
+    assists = List(lee, danGrimbo, jake), yellowCards = List(josh, danGrimbo), motm = rhys, date = LocalDate.of(2023, 4, 30))
+
+  val wickettsTeam3: Team = Team(List(malin, jake, ross, layton, harvey, josh, jobbo, ste, rhys, joey, jj, ash, mattMaiden, danGrimbo))
+  val wickettsResult3: Result = Result(25, homeTeam = wickettsTeam3, awayTeam = wickets, goalsFor = 5, goalsAgainst = 4, scorers = List(ste, jj, ross, jobbo, ste, rhys, ash, jake),
+    assists = List(joey, joey, jake), yellowCards = List(josh), motm = layton, date = LocalDate.of(2023, 5, 7))
+
 
   //  ******** RESULTS ********
 
   val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
     dunCowResult, cottageResult, queensResult, wrockersResult2, phezResult, queensResult2, bailsResult2, wrekinResult,
     wickettsResult, crownResult, cottageResult2, crownResult2, phezResult2, cottageResult3, unicornResult2, wrekinResult2,
-    dunCowResult2).reverse ++ preseasonResults ++ fullResults21 ++ fullResultspre21
+    dunCowResult2, wickettsResult2, wickettsResult3).reverse ++ preseasonResults ++ fullResults21 ++ fullResultspre21
 
 //  ******** FIXTURES *********
 
