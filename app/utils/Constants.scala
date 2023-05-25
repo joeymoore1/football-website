@@ -159,15 +159,19 @@ object Constants {
 
   //  Other player was Nathan in goal
   val wenlockTeam: Team = Team(List(harvey, layton, danGrimbo, jake, adNixon, josh, jobbo, dave, lee, luke, ash, conlon, joey))
-  val wenlockResult: Result = Result(25, homeTeam = wenlockTeam, awayTeam = wenlock, goalsFor = 8, goalsAgainst = 0, scorers = List(joey, lee, lee, dave, dave, dave, dave, joey),
+  val wenlockResult: Result = Result(26, homeTeam = wenlockTeam, awayTeam = wenlock, goalsFor = 8, goalsAgainst = 0, scorers = List(joey, lee, lee, dave, dave, dave, dave, joey),
     assists = List(jake, joey, joey, lee, lee, josh, lee, dave), motm = dave, date = LocalDate.of(2023, 5, 14))
+
+  val queensTeam3: Team = Team(List(malin, harvey, layton, danGrimbo, jake, adNixon, josh, dave, lee, luke, ash, conlon, joey, jj, ste, ross))
+  val queensResult3: Result = Result(27, homeTeam = queensTeam3, awayTeam = queens, goalsFor = 3, goalsAgainst = 6, scorers = List(ross, lee, lee),
+    assists = List(dave, dave, adNixon), yellowCards = List(ash), motm = jj, date = LocalDate.of(2023, 5, 21))
 
   //  ******** RESULTS ********
 
   val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
     dunCowResult, cottageResult, queensResult, wrockersResult2, phezResult, queensResult2, bailsResult2, wrekinResult,
     wickettsResult, crownResult, cottageResult2, crownResult2, phezResult2, cottageResult3, unicornResult2, wrekinResult2,
-    dunCowResult2, wickettsResult2, wickettsResult3, wenlockResult).reverse
+    dunCowResult2, wickettsResult2, wickettsResult3, wenlockResult, queensResult3).reverse
 
 //  ******** FIXTURES *********
 
