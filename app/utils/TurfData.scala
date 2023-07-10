@@ -4,7 +4,7 @@ import models._
 
 import java.time.LocalDate
 
-object ConstantsOld {
+object TurfData {
 
   //  ******** PLAYERS ********
 
@@ -48,8 +48,7 @@ object ConstantsOld {
   val lj: Player = Player(44, Name("Liam", "Johnson"), "Striker")
   val benStokes: Player = Player(45, Name("Ben", "Stokes"), "Defender")
   val jackWills: Player = Player(46, Name("Jack", "Williams"), "Winger")
-  val fake: Player = Player(47, Name("Fake", "Player"), "Winger")
-  val kieran: Player = Player(48, Name("Kieran", "Jakovic"), "Winger")
+  val kieran: Player = Player(47, Name("Kieran", "Jakovic"), "Winger")
 
   val fullTeam: Team = Team(List(joey, chad, mattMaiden, layton, adNixon, danSmout, luke, danGrimbo, charlie, cameron,
     lukeNixon, ste, ross, lee, jobbo, malin, scott, rhys, josh, conlon, jake, bob, dave, ash, harvey, jj, david, callum, matt, kaleem, lewis,
@@ -308,16 +307,25 @@ object ConstantsOld {
   val wenlockResult: Result = Result(25, homeTeam = wenlockTeam, awayTeam = wenlock, goalsFor = 8, goalsAgainst = 0, scorers = List(joey, lee, lee, dave, dave, dave, dave, joey),
     assists = List(jake, joey, joey, lee, lee, josh, lee, dave), motm = dave, date = LocalDate.of(2023, 5, 14))
 
+  val queensTeam3: Team = Team(List(malin, harvey, layton, danGrimbo, jake, adNixon, josh, dave, lee, luke, ash, conlon, joey, jj, ste, ross))
+  val queensResult3: Result = Result(27, homeTeam = queensTeam3, awayTeam = queens, goalsFor = 3, goalsAgainst = 6, scorers = List(ross, lee, lee),
+    assists = List(dave, dave, adNixon), yellowCards = List(ash), motm = jj, date = LocalDate.of(2023, 5, 21))
+
+  //  Other player was ryan jones, joey nixon, ian harkins, sam goucher, jaden
+  // Other and goals were: joey nixon 2. motm was joey n
+  val wenlockTeam2: Team = Team(List(chad, harvey, ross, layton, jake, joey, lee, ash, lukeNixon, mattMaiden))
+  val wenlockResult2: Result = Result(28, homeTeam = wenlockTeam2, awayTeam = wenlock, goalsFor = 8, goalsAgainst = 0, scorers = List(lee, lee, lee, adNixon, adNixon, ash),
+    assists = List(joey, jake, ash, jake, lee, lukeNixon, lukeNixon, jake), date = LocalDate.of(2023, 5, 28))
+
 
   //  ******** RESULTS ********
 
-  val fullResults: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
+  val fullResults22: List[Result] = List(unicornResult, wrockersResult, roseResult, ellesmereResult, bailsResult, nationsResult,
     dunCowResult, cottageResult, queensResult, wrockersResult2, phezResult, queensResult2, bailsResult2, wrekinResult,
     wickettsResult, crownResult, cottageResult2, crownResult2, phezResult2, cottageResult3, unicornResult2, wrekinResult2,
-    dunCowResult2, wickettsResult2, wickettsResult3, wenlockResult).reverse ++ preseasonResults ++ fullResults21 ++ fullResultspre21
+    dunCowResult2, wickettsResult2, wickettsResult3, wenlockResult, queensResult3, wenlockResult2).reverse
 
-//  ******** FIXTURES *********
+  val fullResults: List[Result] = fullResults22 ++ preseasonResults ++ fullResults21 ++ fullResultspre21
 
-  val fullFixtures: List[Fixture] = List()
 
 }

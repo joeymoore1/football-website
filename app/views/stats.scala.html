@@ -12,8 +12,9 @@
     </div>
     <main>
         <h1>Stats Page</h1>
+
+        @if(goalScorers.nonEmpty){
         <section>
-            @if(goalScorers.size >= 1){
             <h2>Most Goals</h2>
             <a href="@routes.ProfileController.index(goalScorers.head.player.index)">@goalScorers.head.player.name.firstName @goalScorers.head.player.name.lastName: @goalScorers.head.goals</a>
             </br>
@@ -25,13 +26,11 @@
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.goals</a>
             </br>
             }
-            }
-            @if(goalScorers.size < 1){
-            <h2>No goals yet</h2>
-            }
         </section>
+        }
+
+        @if(assistsPeople.nonEmpty){
         <section>
-            @if(assistsPeople.size >= 1){
             <h2>Most Assists</h2>
             <a href="@routes.ProfileController.index(assistsPeople.head.player.index)">@assistsPeople.head.player.name.firstName @assistsPeople.head.player.name.lastName: @assistsPeople.head.assists</a>
             </br>
@@ -43,13 +42,11 @@
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.assists</a>
             </br>
             }
-            }
-            @if(assistsPeople.size < 1){
-            <h2>No assists yet</h2>
-            }
         </section>
+        }
+
+        @if(motmList.nonEmpty){
         <section>
-            @if(motmList.size >= 1){
             <h2>Most Motm's</h2>
             <a href="@routes.ProfileController.index(motmList.head.player.index)">@motmList.head.player.name.firstName @motmList.head.player.name.lastName: @motmList.head.motms</a>
             </br>
@@ -61,13 +58,11 @@
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.motms</a>
             </br>
             }
-            }
-            @if(motmList.size < 1){
-            <h2>No motm's yet</h2>
-            }
         </section>
+        }
+
+        @if(yellowsList.nonEmpty){
         <section>
-            @if(yellowsList.size >= 1){
             <h2>Most yellow cards</h2>
             <a href="@routes.ProfileController.index(yellowsList.head.player.index)">@yellowsList.head.player.name.firstName @yellowsList.head.player.name.lastName: @yellowsList.head.yellowCards</a>
             </br>
@@ -79,13 +74,11 @@
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.yellowCards</a>
             </br>
             }
-            }
-            @if(yellowsList.size < 1){
-            <h2>No yellow cards yet</h2>
-            }
         </section>
+        }
+
+        @if(redsList.nonEmpty){
         <section>
-            @if(redsList.size >= 1){
             <h2>Most red cards</h2>
             <a href="@routes.ProfileController.index(redsList.head.player.index)">@redsList.head.player.name.firstName @redsList.head.player.name.lastName: @redsList.head.redCards</a>
             </br>
@@ -97,10 +90,7 @@
             <a href="@routes.ProfileController.index(player.player.index)">@player.player.name.firstName @player.player.name.lastName: @player.redCards</a>
             </br>
             }
-            }
-            @if(redsList.size < 1){
-            <h2>No red cards yet</h2>
-            }
         </section>
+        }
     </main>
 }
