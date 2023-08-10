@@ -14,7 +14,7 @@ class StatsController @Inject()(val controllerComponents: ControllerComponents,
 
     val goalScorerList = playerStatsList(fullTeam.players).filter(_.goals > 0).sortBy(x => (-x.goals, x.player.name.firstName))
 
-    val assistsList = playerStatsList(fullTeam.players).filter(_.assists > 0).sortBy(x => (-x.assists, x.player.name.lastName.reverse))
+    val assistsList = playerStatsList(fullTeam.players).filter(_.assists > 0).sortBy(x => (-x.assists, x.player.name.firstName))
 
     val motmList = playerStatsList(fullTeam.players).filter(_.motms > 0).sortBy(x => (-x.motms, x.player.name.lastName))
 
