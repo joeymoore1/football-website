@@ -63,8 +63,8 @@ object Constants {
     assists = List(josh), motm = ollie, date = LocalDate.of(2023, 7, 16))
 
   val ercallTeam: Team = Team(List(chad, mattMaiden, goucher, rhys, ollie, josh, harvey, ste, jobbo, adFox, jamal, connor, jayden, omd))
-  val ercallResult: Result = Result(3, homeTeam = ercallTeam, awayTeam = ercall, goalsFor = 3, goalsAgainst = 4, scorers = List(rhys, rhys, ollie),
-    assists = List(harvey, josh), motm = ollie, date = LocalDate.of(2023, 7, 23))
+  val ercallResult: Result = Result(3, homeTeam = ercallTeam, awayTeam = ercall, goalsFor = 3, goalsAgainst = 4, scorers = List(rhys, rhys, lee),
+    assists = List(harvey, lee, rhys), motm = ollie, date = LocalDate.of(2023, 7, 23))
 
   val shifnalTeam: Team = Team(List(chad, harvey, luke, ste, layt, lewis, conlon, jobbo, joey, rhys, kaleem, sam, omd, adFox))
   val shifnalResult: Result = Result(4, homeTeam = shifnalTeam, awayTeam = shifnal, goalsFor = 2, goalsAgainst = 4, scorers = List(kaleem, rhys),
